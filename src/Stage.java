@@ -1,20 +1,17 @@
-import org.academiadecodigo.simplegraphics.graphics.Canvas;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
-import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class Stage {
+
     private final int PADDING = 10;
-    private Brick[] brick;
-    private Player player1;
-    private Player player2;
-    private Ball ball;
-    private boolean gameEnd;
-
-
     private final int STAGE_HEIGHT = 500;
     private final int player1_OFFSET = 30;
     private final int player2_OFFSET = 1260;
 
+    private Brick[] bricks;
+    private Player player1;
+    private Player player2;
+    private Ball ball;
+    private boolean gameEnd;
 
     public Stage() {
         player1 = new Player(player1_OFFSET, 10, STAGE_HEIGHT);
@@ -24,9 +21,9 @@ public class Stage {
 
 
     public void init() {
+
         Rectangle canvas = new Rectangle(PADDING, PADDING, 1280, 768);
         canvas.draw();
-
 
         new KeyboardListener(player1, player2);
     }
