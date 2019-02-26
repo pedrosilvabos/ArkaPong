@@ -1,3 +1,10 @@
 public class Main {
-    Stage stage = new Stage();
+    public static void main(String[] args) {
+      Stage stage = new Stage();
+      stage.init();
+
+
+    }
+
+
 }
