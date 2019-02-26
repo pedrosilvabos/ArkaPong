@@ -6,12 +6,12 @@ import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
 
 public class KeyboardListener implements KeyboardHandler {
+
     private int[] movements;
     private double posX;
     private double posY;
     private Player player1;
     private Player player2;
-
 
     public KeyboardListener(Player player1, Player player2) { //mask cast to movable
 
@@ -24,6 +24,7 @@ public class KeyboardListener implements KeyboardHandler {
                 KeyboardEvent.KEY_A,
                 KeyboardEvent.KEY_Z
         };
+
         for (int i = 0; i < movements.length; i++) {
             KeyboardEvent move = new KeyboardEvent();
             move.setKey(movements[i]);
@@ -35,37 +36,37 @@ public class KeyboardListener implements KeyboardHandler {
     }
 
     @Override
-    public void keyPressed(KeyboardEvent keyboardEvent) {
-        switch (keyboardEvent.getKey()) {
-            case KeyboardEvent.KEY_DOWN:
-                player1.setDirection(Direction.DOWN);
-                break;
+    public void keyPressed(KeyboardEvent key) {
+
+        switch (key.getKey()) {
             case KeyboardEvent.KEY_UP:
                 player1.setDirection(Direction.UP);
                 break;
+
+            case KeyboardEvent.KEY_DOWN:
+                player1.setDirection(Direction.DOWN);
+                break;
+
             case KeyboardEvent.KEY_A:
-                System.out.println("UP");
                 player2.setDirection(Direction.UP);
                 break;
+
             case KeyboardEvent.KEY_Z:
-                System.out.println("DOWN");
                 player2.setDirection(Direction.DOWN);
                 break;
-
-
         }
     }
 
     @Override
-    public void keyReleased(KeyboardEvent var1) {
+    public void keyReleased(KeyboardEvent key) {
 
-    }
-
-    public double moveLogic() {
-        if (posX > 0) {
-            return posX;
+        if (key.getKey() == KeyboardEvent.KEY_UP || key.getKey() == KeyboardEvent.KEY_DOWN) {
+            player1.setDirection(null);
         }
-        return posY;
+
+        if (key.getKey() == KeyboardEvent.KEY_A || key.getKey() == KeyboardEvent.KEY_Z) {
+            player2.setDirection(null);
+        }
     }
 
 }
