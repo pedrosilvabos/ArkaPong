@@ -8,40 +8,43 @@ public class Stage {
     private Player player1;
     private Player player2;
     private Ball ball;
-    private Canvas rectangle;
     private boolean gameEnd;
 
-    private final int STAGE_WIDTH = 1024;
+
     private final int STAGE_HEIGHT = 500;
     private final int player1_OFFSET = 30;
-    private final int player2_OFFSET = 1004;
+    private final int player2_OFFSET = 1260;
 
 
     public Stage() {
-        player1 = new Player(10, 10,STAGE_HEIGHT);
-        player2 = new Player(50, 10,STAGE_HEIGHT);
+        player1 = new Player(player1_OFFSET, 10, STAGE_HEIGHT);
+        player2 = new Player(player2_OFFSET, 10, STAGE_HEIGHT);
         ball = new Ball(10, 10);
     }
 
 
-    /* Initial method:
-        Create Stage
-        Create Paddles + make paddles work
-        Create Ball + make ball bounce around
-    */
     public void init() {
-        Rectangle canvas = new Rectangle(PADDING,PADDING,1024,768);
+        Rectangle canvas = new Rectangle(PADDING, PADDING, 1280, 768);
         canvas.draw();
-
-        Rectangle paddle = player1.generatePaddle(player1_OFFSET);
-        Rectangle paddle2 = player2.generatePaddle(player2_OFFSET);
-
-        //ball.move();
 
 
         new KeyboardListener(player1, player2);
     }
-    public void start(){
+
+    public void start() {
+
+        while (true) {
+            try {
+                Thread.sleep(0);
+                player1.move();
+                player2.move();
+
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+        }
+
 
     }
 

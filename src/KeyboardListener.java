@@ -17,8 +17,13 @@ public class KeyboardListener implements KeyboardHandler {
         this.player1 = player1;
         this.player2 = player2;
 
-        int[] movements = {KeyboardEvent.KEY_UP, KeyboardEvent.KEY_DOWN};
-        for(int i = 0; i<movements.length; i++){
+        int[] movements = {
+                KeyboardEvent.KEY_UP,
+                KeyboardEvent.KEY_DOWN,
+                KeyboardEvent.KEY_A,
+                KeyboardEvent.KEY_Z
+        };
+        for (int i = 0; i < movements.length; i++) {
             KeyboardEvent move = new KeyboardEvent();
             move.setKey(movements[i]);
             move.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
@@ -32,27 +37,21 @@ public class KeyboardListener implements KeyboardHandler {
     public void keyPressed(KeyboardEvent keyboardEvent) {
         switch (keyboardEvent.getKey()) {
             case KeyboardEvent.KEY_DOWN:
-                System.out.println("down");
-                player1.setPosY(10);
-                this.posY += 10;
-                this.posX += 0;
+                player1.setDirection(Direction.DOWN);
                 break;
             case KeyboardEvent.KEY_UP:
-                System.out.println("up");
-                player1.setPosY(-10);
-                this.posY -= 10;
-                this.posX += 0;
+                player1.setDirection(Direction.UP);
                 break;
-            case KeyboardEvent.KEY_LEFT:
+            case KeyboardEvent.KEY_A:
+                System.out.println("UP");
+                player2.setDirection(Direction.UP);
+                break;
+            case KeyboardEvent.KEY_Z:
+                System.out.println("DOWN");
+                player2.setDirection(Direction.DOWN);
+                break;
 
-                this.posY -= 0;
-                this.posX -= 10;
-                break;
-            case KeyboardEvent.KEY_RIGHT:
 
-                this.posY -= 0;
-                this.posX += 10;
-                break;
         }
     }
 
