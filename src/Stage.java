@@ -1,32 +1,28 @@
+import org.academiadecodigo.simplegraphics.graphics.Canvas;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class Stage {
-
-    private final int STAGE_WIDTH = 1024;
-    private final int STAGE_HEGHT = 500;
-    private final int player1_OFFSET = 10;
-    private final int player2_OFFSET = 986;
-    private int numberOfBricks;
+    private final int PADDING = 10;
+    private Brick[] brick;
     private Player player1;
     private Player player2;
     private Ball ball;
+    private Canvas rectangle;
+    private boolean gameEnd;
+
+    private final int STAGE_WIDTH = 1024;
+    private final int STAGE_HEIGHT = 500;
+    private final int player1_OFFSET = 30;
+    private final int player2_OFFSET = 1004;
+
 
     public Stage() {
-        player1 = new Player(10, 10);
-        player2 = new Player(50, 10);
+        player1 = new Player(10, 10,STAGE_HEIGHT);
+        player2 = new Player(50, 10,STAGE_HEIGHT);
         ball = new Ball(10, 10);
     }
 
-
-    //Brick Generator
-    public Brick[] generateBricks(int numberOfBricks) {
-        Brick[] bricks = new Brick[numberOfBricks];
-        for (int i = 0; i < bricks.length; i++) {
-            bricks[i] = new Brick();
-        }
-        return bricks;
-    }
 
     /* Initial method:
         Create Stage
@@ -34,15 +30,19 @@ public class Stage {
         Create Ball + make ball bounce around
     */
     public void init() {
-        Picture canvas = new Picture(10, 0, "resources/bg.jpg");
+        Rectangle canvas = new Rectangle(PADDING,PADDING,1024,768);
         canvas.draw();
 
-        Picture paddle = player1.generatePaddle(player1_OFFSET);
-        Picture paddle2 = player2.generatePaddle(player2_OFFSET);
+        Rectangle paddle = player1.generatePaddle(player1_OFFSET);
+        Rectangle paddle2 = player2.generatePaddle(player2_OFFSET);
 
-        ball.move();
+        //ball.move();
+
 
         new KeyboardListener(player1, player2);
+    }
+    public void start(){
+
     }
 
 }

@@ -33,13 +33,13 @@ public class KeyboardListener implements KeyboardHandler {
         switch (keyboardEvent.getKey()) {
             case KeyboardEvent.KEY_DOWN:
                 System.out.println("down");
-                player1.setPosY();
+                player1.setPosY(10);
                 this.posY += 10;
                 this.posX += 0;
                 break;
             case KeyboardEvent.KEY_UP:
                 System.out.println("up");
-
+                player1.setPosY(-10);
                 this.posY -= 10;
                 this.posX += 0;
                 break;

@@ -1,24 +1,25 @@
 import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Ellipse;
+import org.academiadecodigo.simplegraphics.graphics.Rectangle;
+
 public class Ball {
     private int positionX;
     private int positionY;
-    private Ellipse ball;
+    private int dX;
+    private int dY;
+    private int speed;
+    private Rectangle rectangle;
+
 
     //initialize the ball with a motion
     //ball starts at the center of the screen
-    public Ball(int positionX, int positionY){
-        this.positionX = 0;
-        this.positionY = 0;
-        this.ball = new Ellipse(300,300,30,30);
-    }
+ public Ball(int x, int y){
+     this.positionX = x;
+     this.positionY = y;
+ }
     //must know the motion of the ball
     public void move(){
-        this.ball.setColor(Color.BLACK);
-        this.ball.fill();
-        this.positionX = this.ball.getX();
-        this.positionX = this.ball.getY();
-        this.ball.draw();
+
     }
 
 
