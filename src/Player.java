@@ -14,8 +14,10 @@ public class Player implements Drawable {
     private int paddleHeight;
     private int stageHeight;
 
+    private int maxPaddleYTravel;
+
     public Player(int offset, int posY, int stageHeight) {
-        this.step = 30;
+        this.step = 12;
         this.minHeight = stageHeight;
         this.hasLost = false;
         this.paddleHeight = 150;
@@ -38,17 +40,26 @@ public class Player implements Drawable {
         //use switch!!!
 
         if (this.direction == Direction.UP) {
-            System.out.println(posY);
 
             this.posY -= step;
-            this.paddle.translate(0, -step);
-        }
 
+            if(posY < 13){              //CHECK THIS SHIT AND PUT IN PROPERTIES
+                this.posY = 13;
+
+            }else{
+                this.paddle.translate(0, -step);
+            }
+        }
         if (this.direction == Direction.DOWN) {
-            System.out.println(posY);
 
             this.posY += step;
-            this.paddle.translate(0, step);
+            System.out.println(posY);
+            if(posY > 672){              //CHECK THIS SHIT AND PUT IN PROPERTIES
+                this.posY = 672;
+
+            }else {
+                this.paddle.translate(0, step);
+            }
         }
 
         setDirection(null);

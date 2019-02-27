@@ -38,19 +38,19 @@ public class KeyboardListener implements KeyboardHandler {
 
         switch (key.getKey()) {
             case KeyboardEvent.KEY_UP:
-                player1.setDirection(Direction.UP);
-                break;
-
-            case KeyboardEvent.KEY_DOWN:
-                player1.setDirection(Direction.DOWN);
-                break;
-
-            case KeyboardEvent.KEY_A:
                 player2.setDirection(Direction.UP);
                 break;
 
-            case KeyboardEvent.KEY_Z:
+            case KeyboardEvent.KEY_DOWN:
                 player2.setDirection(Direction.DOWN);
+                break;
+
+            case KeyboardEvent.KEY_A:
+                player1.setDirection(Direction.UP);
+                break;
+
+            case KeyboardEvent.KEY_Z:
+                player1.setDirection(Direction.DOWN);
                 break;
         }
     }
