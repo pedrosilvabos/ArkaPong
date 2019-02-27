@@ -7,9 +7,9 @@ public class Stage {
     private final int PADDING = 10;
     private final int STAGE_HEIGHT = 500;
     private final int player1_OFFSET = 30;
-    private final int player2_OFFSET = 1260;
+    private final int player2_OFFSET = 1470;
 
-    private Brick[] bricks;
+    private Block[] block;
     private Player player1;
     private Player player2;
     private Ball ball;
@@ -24,7 +24,7 @@ public class Stage {
 
     public void init() {
 
-        Rectangle canvas = new Rectangle(PADDING, PADDING, 1280, 768);
+        Rectangle canvas = new Rectangle(PADDING, PADDING, 1500, 768);
         canvas.draw();
 
         new KeyboardListener(player1, player2);

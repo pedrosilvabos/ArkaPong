@@ -3,6 +3,9 @@ package org.academiadecodigo.tropadelete.charlie;
 import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 
+import org.academiadecodigo.simplegraphics.graphics.Color;
+import org.academiadecodigo.simplegraphics.graphics.Rectangle;
+
 public class Player implements Drawable {
 
     private int posY;
@@ -16,8 +19,10 @@ public class Player implements Drawable {
     private int paddleHeight;
     private int stageHeight;
 
+    private int maxPaddleYTravel;
+
     public Player(int offset, int posY, int stageHeight) {
-        this.step = 30;
+        this.step = 12;
         this.minHeight = stageHeight;
         this.hasLost = false;
         this.paddleHeight = 150;
@@ -29,7 +34,7 @@ public class Player implements Drawable {
 
     public Rectangle generatePaddle(int x) {
 
-        Rectangle paddle = new Rectangle(x, posY, 10, 150);
+        Rectangle paddle = new Rectangle(x, posY, 25, 150);
         paddle.setColor(Color.GREEN);
         paddle.fill();
         return paddle;
@@ -40,17 +45,26 @@ public class Player implements Drawable {
         //use switch!!!
 
         if (this.direction == Direction.UP) {
-            System.out.println(posY);
 
             this.posY -= step;
-            this.paddle.translate(0, -step);
-        }
 
+            if(posY < 13){              //CHECK THIS SHIT AND PUT IN PROPERTIES
+                this.posY = 13;
+
+            }else{
+                this.paddle.translate(0, -step);
+            }
+        }
         if (this.direction == Direction.DOWN) {
-            System.out.println(posY);
 
             this.posY += step;
-            this.paddle.translate(0, step);
+            System.out.println(posY);
+            if(posY > 636){              //CHECK THIS SHIT AND PUT IN PROPERTIES
+                this.posY = 636;
+
+            }else {
+                this.paddle.translate(0, step);
+            }
         }
 
         setDirection(null);
@@ -65,4 +79,3 @@ public class Player implements Drawable {
     }
 
 }
-
