@@ -1,4 +1,4 @@
-package org.academeiadecodigo.tropadelete.charlie;
+package org.academiadecodigo.tropadelete;
 
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 
@@ -20,9 +20,10 @@ public class Stage {
 
 
     public Stage() {
+
         player1 = new Player(player1_OFFSET, 10, STAGE_HEIGHT);
         player2 = new Player(player2_OFFSET, 10, STAGE_HEIGHT);
-        ball = new Ball(10, 10);
+        //ball = new Ball(10, 10);
 
     }
 
@@ -37,12 +38,12 @@ public class Stage {
 
         while (true) {
             try {
-                Thread.sleep(0);
+                Thread.sleep(20);
                 player1.move();
                 player2.move();
 
-                if (!ball.exists()) {
-                    ball =
+                if (ball == null) {
+                    ball = Utils.startBall(CANVAS);
                 }
 
                 ball.move();
