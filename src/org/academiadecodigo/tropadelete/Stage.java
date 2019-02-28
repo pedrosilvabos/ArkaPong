@@ -5,12 +5,14 @@ import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 
 public class Stage {
-    //there is a bug with the width and the stage height!!
     private final int PADDING = 10;
     private final int STAGE_HEIGHT = 500;
-    private final int player1_OFFSET = 30;
-    private final int player2_OFFSET = 1260;
-    private final Rectangle CANVAS = new Rectangle(PADDING, PADDING, 1280, 768);
+    private final int STAGE_WIDTH = 1500;
+
+    private final int PADDLE_WALL_OFFSET = 30;
+    private final int PLAYER1_OFFSET = PADDLE_WALL_OFFSET;
+    private final int PLAYER2_OFFSET = STAGE_WIDTH - PADDLE_WALL_OFFSET;
+    private final Rectangle CANVAS = new Rectangle(PADDING, PADDING, STAGE_WIDTH, 768);
 
     private int counter = 0;
     private Block[] blocks;
@@ -19,51 +21,39 @@ public class Stage {
     private Ball ball;
     private boolean gameEnd;
 
-    public void init() {
-        Picture background = new Picture(PADDING, PADDING, "resources/background1.jpg");
+    private String backgroundName;
+
+    public Stage() {
+        int random = (int) (Math.random() * 2);
+
+        String[] backgrounds = {
+                "resources/background2.jpg",
+                "resources/background3.jpg"
+        };
+        this.backgroundName = backgrounds[random];
+        Picture background = new Picture(PADDING, PADDING, this.backgroundName);
         background.draw();
-        CANVAS.draw();
-        player1 = new Player(player1_OFFSET, 10, STAGE_HEIGHT);
-        player2 = new Player(player2_OFFSET, 10, STAGE_HEIGHT);
-        new KeyboardListener(player1, player2);
     }
-//this is just an idea
-    public void backgroundChanger() {
 
-            int random = (int) (Math.random() * 2);
-            System.out.println(random);
-            System.out.println("change the backgroung");
-            String[] backgrounds = {
-                    "resources/background1.jpg",
-                    "resources/background2.jpg"
-            };
-            Picture background = new Picture(PADDING, PADDING, backgrounds[random]);
-            background.draw();
-            player1.draw();
-            player2.draw();
-
+    public void init() {
+        CANVAS.draw();
+        player1 = new Player(PLAYER1_OFFSET, PADDING, STAGE_HEIGHT);
+        player2 = new Player(PLAYER2_OFFSET, PADDING, STAGE_HEIGHT);
+        new KeyboardListener(player1, player2);
     }
 
     public void start() {
 
         while (true) {
             try {
-                Thread.sleep(1);
+                Thread.sleep(20);
                 player1.move();
                 player2.move();
                 if (ball == null) {
                     ball = Utils.startBall(CANVAS);
                 }
-            this.counter += 1;
-                System.out.println(counter);
-                if(this.counter == 1000){
-                   // backgroundChanger();
-
-                    this.counter = 0;
-                }
                 ball.move();
                 ball.draw();
-
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

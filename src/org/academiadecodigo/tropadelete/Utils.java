@@ -11,10 +11,9 @@ public class Utils {
      */
     public static Ball startBall(Rectangle canvas) {
 
-        Ball ball = new Ball(canvas.getX() + (canvas.getWidth() / 2), canvas.getY() + (canvas.getHeight() / 2));
 
         // set ball to center
-        ball = new Ball(canvas.getX() + (canvas.getWidth() / 2), canvas.getY() + (canvas.getHeight() / 2));
+        Ball ball = new Ball(canvas.getX() + (canvas.getWidth() / 2), canvas.getY() + (canvas.getHeight() / 2));
 
         // wait for 1 to 2 seconds
 

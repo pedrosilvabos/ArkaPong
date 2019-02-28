@@ -32,7 +32,7 @@ public class Player implements Drawable {
 
     public Rectangle generatePaddle() {
 
-        Rectangle paddle = new Rectangle(this.playerOffset, posY, 5, 150);
+        Rectangle paddle = new Rectangle(this.playerOffset, posY, 25, 150);
         paddle.setColor(Color.GREEN);
         paddle.fill();
 
@@ -42,7 +42,7 @@ public class Player implements Drawable {
     public Picture skinPaddle() {
         //make pictures names number and random them
         Picture paddle = new Picture(this.playerOffset, posY, "resources/paddle.png");
-        paddle.draw();
+
         return paddle;
     }
 
@@ -55,17 +55,21 @@ public class Player implements Drawable {
                 this.posY = 13;
             } else {
                 this.paddle.translate(0, -step);
+                this.paddleSkin.delete();
                 this.paddleSkin.translate(0, -step);
+                this.paddleSkin.draw();
             }
         }
         if (this.direction == Direction.DOWN) {
             this.posY += step;
-            System.out.println(posY);
+
             if (posY > 636) {              //CHECK THIS SHIT AND PUT IN PROPERTIES
                 this.posY = 636;
             } else {
                 this.paddle.translate(0, step);
+                this.paddleSkin.delete();
                 this.paddleSkin.translate(0, step);
+                this.paddleSkin.draw();
             }
         }
         setDirection(null);
@@ -77,6 +81,10 @@ public class Player implements Drawable {
 
     public void setDirection(Direction direction) {
         this.direction = direction;
+    }
+
+    public int getPosY(){
+        return posY;
     }
 
 }
