@@ -1,4 +1,4 @@
-package org.academeiadecodigo.tropadelete.charlie;
+package org.academiadecodigo.tropadelete;
 
 public class Main {
 
