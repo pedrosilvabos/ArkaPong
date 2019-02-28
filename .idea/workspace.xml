@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Stage.java" line="57" mnemonic="9" />
+    <bookmark url="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Stage.java" line="58" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26c2ce88-a0eb-4548-bc3c-cf0a040ac402" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/Stage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/Stage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/background1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/background1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/background2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/background2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/bg.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Stage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Stage.java" afterDir="false" />
     </list>
@@ -22,7 +25,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
+            <state relative-caret-position="172">
               <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="22" />
             </state>
           </provider>
@@ -31,20 +34,32 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+            <state relative-caret-position="141">
+              <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2385#2386#0" expanded="true" />
+                <element signature="e#2414#2415#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/background2.jpg">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/paddle.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Stage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
+            <state relative-caret-position="154">
+              <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -73,8 +88,8 @@
         <option value="$PROJECT_DIR$/src/Brick.java" />
         <option value="$PROJECT_DIR$/src/Ball.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Main.java" />
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Player.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Stage.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Player.java" />
       </list>
     </option>
   </component>
@@ -122,7 +137,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551321344911" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551347021585" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -266,17 +281,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/paddle.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/background2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
+        <state relative-caret-position="172">
           <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="22" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/background1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Stage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
+        <state relative-caret-position="154">
+          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -285,10 +309,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+        <state relative-caret-position="141">
+          <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2385#2386#0" expanded="true" />
+            <element signature="e#2414#2415#0" expanded="true" />
           </folding>
         </state>
       </provider>

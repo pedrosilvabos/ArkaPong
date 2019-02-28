@@ -27,7 +27,7 @@ public class Player implements Drawable {
         this.maxHeight = stageHeight - this.paddleHeight;
         this.posY = (this.minHeight / 2) + (this.paddleHeight / 2);
         this.paddle = generatePaddle();
-        //this.paddleSkin = skinPaddle();
+        this.paddleSkin = skinPaddle();
     }
 
     public Rectangle generatePaddle() {
@@ -35,6 +35,7 @@ public class Player implements Drawable {
         Rectangle paddle = new Rectangle(this.playerOffset, posY, 5, 150);
         paddle.setColor(Color.GREEN);
         paddle.fill();
+
         return paddle;
     }
 
@@ -48,33 +49,25 @@ public class Player implements Drawable {
     public void move() {
 
         //use switch!!!
-
         if (this.direction == Direction.UP) {
-
             this.posY -= step;
-
             if (posY < 13) {              //CHECK THIS SHIT AND PUT IN PROPERTIES
                 this.posY = 13;
-
             } else {
                 this.paddle.translate(0, -step);
-                //this.paddleSkin.translate(0, -step);
+                this.paddleSkin.translate(0, -step);
             }
         }
         if (this.direction == Direction.DOWN) {
-
             this.posY += step;
             System.out.println(posY);
             if (posY > 636) {              //CHECK THIS SHIT AND PUT IN PROPERTIES
                 this.posY = 636;
-
             } else {
                 this.paddle.translate(0, step);
-                //this.paddleSkin.translate(0, step);
-
+                this.paddleSkin.translate(0, step);
             }
         }
-
         setDirection(null);
     }
 

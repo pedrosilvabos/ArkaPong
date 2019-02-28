@@ -20,7 +20,8 @@ public class Stage {
     private boolean gameEnd;
 
     public void init() {
-
+        Picture background = new Picture(PADDING, PADDING, "resources/background1.jpg");
+        background.draw();
         CANVAS.draw();
         player1 = new Player(player1_OFFSET, 10, STAGE_HEIGHT);
         player2 = new Player(player2_OFFSET, 10, STAGE_HEIGHT);
@@ -57,6 +58,7 @@ public class Stage {
                 System.out.println(counter);
                 if(this.counter == 1000){
                    // backgroundChanger();
+
                     this.counter = 0;
                 }
                 ball.move();
