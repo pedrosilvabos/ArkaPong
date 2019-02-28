@@ -1,4 +1,4 @@
-package org.academiadecodigo.tropadelete;
+package org.academiadecodigo.tropadelete.charlie;
 
 import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;

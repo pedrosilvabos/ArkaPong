@@ -1,8 +1,7 @@
-package org.academiadecodigo.tropadelete;
+package org.academiadecodigo.tropadelete.charlie;
 
 import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Ellipse;
-import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 
 public class Ball implements Drawable {
 
@@ -27,7 +26,7 @@ public class Ball implements Drawable {
     }
 
     /**
-     * Moves this org.academiadecodigo.tropadelete.Ball by incrementing the x and y parameters according to the
+     * Moves this Ball by incrementing the x and y parameters according to the
      * deltaX and deltaY parameters, correspondingly
      */
     public void move(){

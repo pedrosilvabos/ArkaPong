@@ -1,4 +1,4 @@
-package org.academiadecodigo.tropadelete;
+package org.academiadecodigo.tropadelete.charlie;
 
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 
@@ -6,7 +6,7 @@ public class Utils {
 
 
     /**
-     * initializes a new org.academiadecodigo.tropadelete.Ball in the center of the org.academiadecodigo.tropadelete.Stage
+     * initializes a new Ball in the center of the Stage
      * and throws it to a random direction of left and right
      */
     public static Ball startBall(Rectangle canvas) {
