@@ -26,33 +26,56 @@ public class Ball implements Drawable {
     }
 
     /**
-     * Moves this org.academiadecodigo.tropadelete.Ball by incrementing the x and y parameters according to the
+     * Moves this Ball by incrementing the x and y parameters according to the
      * deltaX and deltaY parameters, correspondingly
      */
     public void move(){
         x += dx;
         y += dy;
         ellipse.translate(dx, dy);
-        //System.out.println("X: " + x + " Y: " + y);
     }
 
+    /**
+     * Paints the ellipse on the screenWriter
+     *
+     * @see Ellipse#draw()
+     */
     public void draw() {
         ellipse.fill();
+    }
+
+    public Ellipse getEllipse() {
+        return ellipse;
     }
 
     /**
      * Sets the value of the property deltaX.
      *
-     * @param angle
+     * @param angleDegree
      */
-    public void setDelta(double angle) {
-        dx = SPEED * (int) Math.cos(angle);
-        dy = SPEED * (int) Math.sin(angle);
-        //System.out.println("DeltaX: " + dx + " DeltaY: " + dy);
+    public void setDelta(double angleDegree) {
+
+        int radians = (int) Math.toRadians(angleDegree);
+
+        dx = SPEED * (int) Math.round(Math.cos(radians));
+        dy = SPEED * (int) Math.round(Math.sin(radians));
     }
 
-    public void setDirection(int angleRad) {
-        dx = SPEED * angleRad;
+    public void bounce(AxisBounce axis) {
+
+        switch (axis) {
+            case X:
+                dx *= -1;
+                break;
+
+            case Y:
+                dy *= -1;
+                break;
+
+            default:
+                dx *= -1;
+                dy *= -1;
+        }
     }
 
 }

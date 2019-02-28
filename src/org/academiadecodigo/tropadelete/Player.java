@@ -13,6 +13,7 @@ public class Player implements Drawable {
     private Direction direction;
     private boolean hasLost;
 
+    private PlayerNumber playerNumber;
     private Rectangle paddle;
     private int minHeight;
     private int maxHeight;
@@ -21,7 +22,7 @@ public class Player implements Drawable {
 
     private int maxPaddleYTravel;
 
-    public Player(int offset, int posY, int stageHeight) {
+    public Player(int offset, int posY, int stageHeight, PlayerNumber playerNumber) {
         this.step = 12;
         this.minHeight = stageHeight;
         this.hasLost = false;
@@ -29,6 +30,7 @@ public class Player implements Drawable {
         this.maxHeight = stageHeight - this.paddleHeight;
         this.posY = (this.minHeight / 2) + (this.paddleHeight / 2);
         this.paddle = generatePaddle(offset);
+        this.playerNumber = playerNumber;
     }
 
 
@@ -38,6 +40,10 @@ public class Player implements Drawable {
         paddle.setColor(Color.GREEN);
         paddle.fill();
         return paddle;
+    }
+
+    public PlayerNumber getPlayerNumber() {
+        return playerNumber;
     }
 
     public void move() {
@@ -68,6 +74,10 @@ public class Player implements Drawable {
         }
 
         setDirection(null);
+    }
+
+    public Rectangle getRectangle() {
+        return paddle;
     }
 
     public void draw() {

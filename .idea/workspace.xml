@@ -2,62 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26c2ce88-a0eb-4548-bc3c-cf0a040ac402" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/AxisBounce.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/CollisionDetector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/PlayerNumber.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArkaPong-pedrosilvabos-skeleton.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ArkaPong-pedrosilvabos-skeleton.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ArkaPong.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ArkaPong.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArkaPong_Diagram.png" beforeDir="false" afterPath="$PROJECT_DIR$/ArkaPong_Diagram.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arkapong-master.iml" beforeDir="false" afterPath="$PROJECT_DIR$/arkapong-master.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/simplegraphics.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/simplegraphics.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ArkaPong-pedrosilvabos-skeleton/Ball.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ArkaPong-pedrosilvabos-skeleton/Ball.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ArkaPong-pedrosilvabos-skeleton/Brick.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ArkaPong-pedrosilvabos-skeleton/Brick.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ArkaPong-pedrosilvabos-skeleton/KeyboardListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ArkaPong-pedrosilvabos-skeleton/KeyboardListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ArkaPong-pedrosilvabos-skeleton/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ArkaPong-pedrosilvabos-skeleton/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ArkaPong-pedrosilvabos-skeleton/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ArkaPong-pedrosilvabos-skeleton/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ArkaPong-pedrosilvabos-skeleton/Stage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ArkaPong-pedrosilvabos-skeleton/Stage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ArkaPong-pedrosilvabos-skeleton/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ArkaPong-pedrosilvabos-skeleton/Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ArkaPong-pedrosilvabos-skeleton/org/academiadecodigo/tropadelete/charlie/Ball.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ArkaPong-pedrosilvabos-skeleton/org/academiadecodigo/tropadelete/charlie/Ball.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ArkaPong-pedrosilvabos-skeleton/org/academiadecodigo/tropadelete/charlie/Brick.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ArkaPong-pedrosilvabos-skeleton/org/academiadecodigo/tropadelete/charlie/Brick.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ArkaPong-pedrosilvabos-skeleton/org/academiadecodigo/tropadelete/charlie/Direction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ArkaPong-pedrosilvabos-skeleton/org/academiadecodigo/tropadelete/charlie/Direction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ArkaPong-pedrosilvabos-skeleton/org/academiadecodigo/tropadelete/charlie/Drawable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ArkaPong-pedrosilvabos-skeleton/org/academiadecodigo/tropadelete/charlie/Drawable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ArkaPong-pedrosilvabos-skeleton/org/academiadecodigo/tropadelete/charlie/KeyboardListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ArkaPong-pedrosilvabos-skeleton/org/academiadecodigo/tropadelete/charlie/KeyboardListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ArkaPong-pedrosilvabos-skeleton/org/academiadecodigo/tropadelete/charlie/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ArkaPong-pedrosilvabos-skeleton/org/academiadecodigo/tropadelete/charlie/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ArkaPong-pedrosilvabos-skeleton/org/academiadecodigo/tropadelete/charlie/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ArkaPong-pedrosilvabos-skeleton/org/academiadecodigo/tropadelete/charlie/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ArkaPong-pedrosilvabos-skeleton/org/academiadecodigo/tropadelete/charlie/Stage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ArkaPong-pedrosilvabos-skeleton/org/academiadecodigo/tropadelete/charlie/Stage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ArkaPong-pedrosilvabos-skeleton/org/academiadecodigo/tropadelete/charlie/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ArkaPong-pedrosilvabos-skeleton/org/academiadecodigo/tropadelete/charlie/Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/Ball.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arkaPong/Ball.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/Brick.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arkaPong/Brick.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/Direction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arkaPong/Direction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/Drawable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arkaPong/Drawable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/KeyboardListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arkaPong/KeyboardListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/arkaPong/META-INF/ArkaPong.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arkaPong/META-INF/ArkaPong.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arkaPong/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arkaPong/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/Stage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arkaPong/Stage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arkaPong/Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/Ball.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/Ball.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/Block.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/Block.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/Brick.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/Brick.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/Direction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/Direction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/Drawable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/Drawable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/KeyboardListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/KeyboardListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/Stage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/Stage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/paddle.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/paddle.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/org/academeiadecodigo/tropadelete/charlie/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Ball.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/org/academeiadecodigo/tropadelete/charlie/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Block.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/org/academeiadecodigo/tropadelete/charlie/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Direction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/org/academeiadecodigo/tropadelete/charlie/Drawable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Drawable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/org/academeiadecodigo/tropadelete/charlie/KeyboardListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/KeyboardListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/org/academeiadecodigo/tropadelete/charlie/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/org/academeiadecodigo/tropadelete/charlie/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/org/academeiadecodigo/tropadelete/charlie/Stage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Stage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/org/academeiadecodigo/tropadelete/charlie/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/tropadelete.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/tropadelete.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Ball.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Block.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Stage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Stage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Utils.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,28 +26,29 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/KeyboardListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="615">
+              <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+              <folding>
+                <element signature="e#1333#1334#0" expanded="true" />
+                <element signature="e#1368#1369#0" expanded="true" />
+                <element signature="e#1915#1916#0" expanded="true" />
+                <element signature="e#1943#1944#0" expanded="true" />
+                <element signature="e#1898#1899#0" expanded="true" />
+                <element signature="e#1927#1928#0" expanded="true" />
+                <element signature="e#1980#1981#0" expanded="true" />
+                <element signature="e#2022#2023#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/PlayerNumber.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -100,29 +56,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Stage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Utils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="58" lean-forward="true" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
+            <state relative-caret-position="508">
+              <caret line="48" column="66" selection-start-line="48" selection-start-column="66" selection-end-line="48" selection-end-column="66" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Ball.java">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="628">
-              <caret line="50" column="10" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
+            <state relative-caret-position="540">
+              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/CollisionDetector.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="385">
+              <caret line="56" column="19" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
               <folding>
-                <element signature="e#1411#1412#0" expanded="true" />
-                <element signature="e#1447#1448#0" expanded="true" />
+                <element signature="e#5292#5293#0" expanded="true" />
+                <element signature="e#5400#5401#0" expanded="true" />
+                <element signature="e#5508#5509#0" expanded="true" />
+                <element signature="e#5636#5637#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -131,8 +89,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Block.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="555">
+              <caret line="46" column="25" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
+              <folding>
+                <element signature="e#874#875#0" expanded="true" />
+                <element signature="e#905#906#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -147,10 +109,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Drawable.java">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/AxisBounce.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+            <state relative-caret-position="60">
+              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Ball.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="900">
+              <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+              <folding>
+                <element signature="e#1033#1034#0" expanded="true" />
+                <element signature="e#1063#1064#0" expanded="true" />
+                <element signature="e#1120#1121#0" expanded="true" />
+                <element signature="e#1146#1147#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/simplegraphics.jar!/org/academiadecodigo/simplegraphics/graphics/Shape.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="10" column="15" lean-forward="true" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -161,6 +147,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="module-info" />
+        <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -181,9 +169,14 @@
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/org/academeiadecodigo/tropadelete/charlie/Utils.java" />
         <option value="$PROJECT_DIR$/src/module-info.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/KeyboardListener.java" />
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Ball.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Utils.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/PlayerNumber.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Player.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Block.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/AxisBounce.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Stage.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/CollisionDetector.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Ball.java" />
       </list>
     </option>
   </component>
@@ -197,6 +190,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -204,24 +198,6 @@
             <path>
               <item name="ArkaPong" type="b2602c69:ProjectViewProjectNode" />
               <item name="ArkaPong" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ArkaPong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ArkaPong" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ArkaPong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ArkaPong" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="simplegraphics.jar" type="ab9368bb:PsiFileNode" />
-            </path>
-            <path>
-              <item name="ArkaPong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ArkaPong" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="simplegraphics.jar" type="ab9368bb:PsiFileNode" />
-              <item name="simplegraphics" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ArkaPong" type="b2602c69:ProjectViewProjectNode" />
@@ -238,13 +214,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551305613635" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551391747480" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -309,25 +284,26 @@
       <option name="presentableId" value="Default" />
       <updated>1551205458023</updated>
       <workItem from="1551205459267" duration="4235000" />
-      <workItem from="1551263136790" duration="9305000" />
+      <workItem from="1551263136790" duration="9726000" />
+      <workItem from="1551365900676" duration="1067000" />
+      <workItem from="1551374783529" duration="13814000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13540000" />
+    <option name="totallyTimeSpent" value="28842000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="977" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49943504" visible="true" weight="0.16080937" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49943504" visible="true" weight="0.16400427" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.500565" side_tool="true" weight="0.157082" />
-      <window_info anchor="bottom" id="Messages" weight="0.3299435" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3299435" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3299435" />
@@ -340,6 +316,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.3299435" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -366,20 +343,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Drawable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" selection-start-column="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Direction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Drawable.java" />
+    <entry file="file://$PROJECT_DIR$/src/Direction.java" />
     <entry file="jar://$PROJECT_DIR$/lib/simplegraphics.jar!/org/academiadecodigo/simplegraphics/keyboard/KeyboardHandler.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -387,135 +352,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/KeyboardListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Brick.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/KeyboardListener.java" />
+    <entry file="file://$PROJECT_DIR$/src/Brick.java" />
     <entry file="file://$PROJECT_DIR$/ArkaPong-pedrosilvabos-skeleton.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/ArkaPong.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ball.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <element signature="e#914#915#0" expanded="true" />
-            <element signature="e#936#937#0" expanded="true" />
-            <element signature="e#1249#1250#0" expanded="true" />
-            <element signature="e#1278#1279#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#generatePaddle#0;class#Player#0" />
-            <element signature="method#move#0;class#Player#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Stage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/Ball.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/module-info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="15" selection-start-column="7" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Block.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Drawable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java" />
+    <entry file="file://$PROJECT_DIR$/src/Ball.java" />
+    <entry file="file://$PROJECT_DIR$/src/Player.java" />
+    <entry file="file://$PROJECT_DIR$/src/Utils.java" />
+    <entry file="file://$PROJECT_DIR$/src/Stage.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/Ball.java" />
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/Util.java" />
+    <entry file="file://$PROJECT_DIR$/src/module-info.java" />
     <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/KeyboardListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Direction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Ball.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="50" column="10" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
-          <folding>
-            <element signature="e#1411#1412#0" expanded="true" />
-            <element signature="e#1447#1448#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -526,24 +382,131 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Player.java">
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Drawable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="30">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Stage.java">
+    <entry file="jar://$PROJECT_DIR$/lib/simplegraphics.jar!/org/academiadecodigo/simplegraphics/graphics/Ellipse.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="-182">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/openjdk-11.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Math.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="168" column="25" selection-start-line="168" selection-start-column="25" selection-end-line="168" selection-end-column="25" />
+          <folding>
+            <element signature="e#7443#7444#0" expanded="true" />
+            <element signature="e#7524#7525#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/simplegraphics.jar!/org/academiadecodigo/simplegraphics/graphics/Rectangle.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-239">
+          <caret line="33" column="27" lean-forward="true" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/simplegraphics.jar!/org/academiadecodigo/simplegraphics/graphics/Shape.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="15" lean-forward="true" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/PlayerNumber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+          <folding>
+            <element signature="e#1333#1334#0" expanded="true" />
+            <element signature="e#1368#1369#0" expanded="true" />
+            <element signature="e#1915#1916#0" expanded="true" />
+            <element signature="e#1943#1944#0" expanded="true" />
+            <element signature="e#1898#1899#0" expanded="true" />
+            <element signature="e#1927#1928#0" expanded="true" />
+            <element signature="e#1980#1981#0" expanded="true" />
+            <element signature="e#2022#2023#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="58" lean-forward="true" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
+        <state relative-caret-position="540">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Block.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="46" column="25" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
+          <folding>
+            <element signature="e#874#875#0" expanded="true" />
+            <element signature="e#905#906#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Direction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Stage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="48" column="66" selection-start-line="48" selection-start-column="66" selection-end-line="48" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/AxisBounce.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/CollisionDetector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="56" column="19" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
+          <folding>
+            <element signature="e#5292#5293#0" expanded="true" />
+            <element signature="e#5400#5401#0" expanded="true" />
+            <element signature="e#5508#5509#0" expanded="true" />
+            <element signature="e#5636#5637#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/Ball.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+          <folding>
+            <element signature="e#1033#1034#0" expanded="true" />
+            <element signature="e#1063#1064#0" expanded="true" />
+            <element signature="e#1120#1121#0" expanded="true" />
+            <element signature="e#1146#1147#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

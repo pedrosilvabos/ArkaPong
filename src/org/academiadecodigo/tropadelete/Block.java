@@ -42,4 +42,8 @@ public class Block {
         this.isHit = false;
         rectangle.fill();
     }
+
+    public Rectangle getRectangle() {
+        return rectangle;
+    }
 }

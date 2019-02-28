@@ -21,8 +21,8 @@ public class Stage {
 
     public Stage() {
 
-        player1 = new Player(player1_OFFSET, 10, STAGE_HEIGHT);
-        player2 = new Player(player2_OFFSET, 10, STAGE_HEIGHT);
+        player1 = new Player(player1_OFFSET, 10, STAGE_HEIGHT, PlayerNumber.ONE);
+        player2 = new Player(player2_OFFSET, 10, STAGE_HEIGHT, PlayerNumber.TWO);
         //ball = new Ball(10, 10);
 
     }
@@ -45,6 +45,8 @@ public class Stage {
                 if (ball == null) {
                     ball = Utils.startBall(CANVAS);
                 }
+
+                CollisionDetector.ballCollidesWithWalls(ball, CANVAS);
 
                 ball.move();
                 ball.draw();

@@ -1,14 +1,18 @@
 package org.academiadecodigo.tropadelete;
 
-
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
+import org.academiadecodigo.simplegraphics.graphics.Shape;
+
+import java.util.Random;
 
 public class Utils {
 
 
     /**
-     * initializes a new org.academiadecodigo.tropadelete.Ball in the center of the org.academiadecodigo.tropadelete.Stage
+     * initializes a new Ball in the center of the Stage
      * and throws it to a random direction of left and right
+     *
+     * @return the ball centered in Stage and with correct delta values
      */
     public static Ball startBall(Rectangle canvas) {
 
@@ -17,19 +21,24 @@ public class Utils {
 
         // wait for 1 to 2 seconds
 
-        int rand = (int) Math.floor(Math.random() * 2);
-        //System.out.println(rand);
+        Random random = new Random();
+        boolean isRight = random.nextBoolean();
 
-        System.out.println(Math.cos(Math.toRadians(0)));
-        System.out.println(Math.cos(Math.toRadians(90)));
-        System.out.println(Math.cos(Math.toRadians(180)));
-        System.out.println(Math.cos(Math.toRadians(270)));
-
-        if (rand == 1) {
-            ball.setDelta(0);       // RIGHT
+        if (isRight) {
+            ball.setDelta(0);
         } else {
-            ball.setDelta(180);     // LEFT
+            ball.setDelta(180);
         }
         return ball;
     }
+
+    public static void ballCollisionWithPaddle(Ball b, Player p) {
+
+        Shape paddle = (Shape) p.getRectangle();
+        Shape ball = (Shape) b.getEllipse();
+
+
+    }
+
+
 }
