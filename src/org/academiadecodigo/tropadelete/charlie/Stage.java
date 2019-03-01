@@ -32,8 +32,8 @@ public class Stage {
         int random = (int) (Math.random() * 2);
 
         String[] backgrounds = {
-                "resources/background2.jpg",
-                "resources/background3.jpg"
+                "resources/background2.png",
+                "resources/background3.png"
         };
         this.backgroundName = backgrounds[random];
         Picture background = new Picture(PADDING, PADDING, this.backgroundName);
