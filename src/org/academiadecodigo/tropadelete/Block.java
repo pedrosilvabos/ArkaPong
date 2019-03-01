@@ -3,7 +3,7 @@ package org.academiadecodigo.tropadelete;
 import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 
-public class Block {
+public class Block implements Drawable {
 
     private int x;
     private int y;
@@ -12,6 +12,15 @@ public class Block {
 
     public Block(){
         rectangle = new Rectangle();
+        rectangle.setColor(Color.BLUE);
+        rectangle.fill();
+    }
+
+    /** For testing purposes. */
+    public Block(int x, int y) {
+        this.x = x;
+        this.y = y;
+        rectangle = new Rectangle(x, y, 60, 60);
         rectangle.setColor(Color.BLUE);
         rectangle.fill();
     }
@@ -45,5 +54,13 @@ public class Block {
 
     public Rectangle getRectangle() {
         return rectangle;
+    }
+
+    public boolean isHit() {
+        return isHit;
+    }
+
+    public void draw() {
+        rectangle.fill();
     }
 }

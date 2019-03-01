@@ -25,19 +25,15 @@ public class Utils {
         boolean isRight = random.nextBoolean();
 
         if (isRight) {
-            ball.setDelta(0);
+            ball.setDeltaByAngle(30);
         } else {
-            ball.setDelta(180);
+            ball.setDeltaByAngle(180 - 30);
         }
+
+        System.out.println("X: " + Math.cos(Math.toRadians(150)));
+
+        System.out.println("isRight: " + isRight);
         return ball;
-    }
-
-    public static void ballCollisionWithPaddle(Ball b, Player p) {
-
-        Shape paddle = (Shape) p.getRectangle();
-        Shape ball = (Shape) b.getEllipse();
-
-
     }
 
 

@@ -12,7 +12,7 @@ public class Stage {
     private final int player2_OFFSET = 1260;
     private final Rectangle CANVAS = new Rectangle(PADDING, PADDING, 1280, 768);
 
-    private Block[] bricks;
+    private Block[] blocks = new Block[3];
     private Player player1;
     private Player player2;
     private Ball ball;
@@ -24,6 +24,12 @@ public class Stage {
         player1 = new Player(player1_OFFSET, 10, STAGE_HEIGHT, PlayerNumber.ONE);
         player2 = new Player(player2_OFFSET, 10, STAGE_HEIGHT, PlayerNumber.TWO);
         //ball = new Ball(10, 10);
+
+
+        /** For testing purposes! */
+        for (int i = 0 ; i < blocks.length ; i++) {
+            blocks[i] = new Block(((1280 / 2) - 300) + (i * 30), (768 / 2) + 20);
+        }
 
     }
 
@@ -37,6 +43,7 @@ public class Stage {
     public void start() {
 
         while (true) {
+
             try {
                 Thread.sleep(20);
                 player1.move();
@@ -47,6 +54,21 @@ public class Stage {
                 }
 
                 CollisionDetector.ballCollidesWithWalls(ball, CANVAS);
+
+                for (Block block : blocks) {
+
+                    if (!block.isHit()) {
+                        CollisionDetector.ballCollidesWithBlocks(ball, block); /** Testing this now. */
+                    }
+                }
+
+                CollisionDetector.ballCollidesWithPlayer(ball, player1);
+                CollisionDetector.ballCollidesWithPlayer(ball, player2);
+                for (Block block : blocks) {
+                    if (!block.isHit()) {
+                        block.draw();
+                    }
+                }
 
                 ball.move();
                 ball.draw();

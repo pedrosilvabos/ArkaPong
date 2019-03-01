@@ -3,14 +3,11 @@ package org.academiadecodigo.tropadelete;
 import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 
-import org.academiadecodigo.simplegraphics.graphics.Color;
-import org.academiadecodigo.simplegraphics.graphics.Rectangle;
-
 public class Player implements Drawable {
 
     private int posY;
     private int step;
-    private Direction direction;
+    private PlayerDirection playerDirection;
     private boolean hasLost;
 
     private PlayerNumber playerNumber;
@@ -50,7 +47,7 @@ public class Player implements Drawable {
 
         //use switch!!!
 
-        if (this.direction == Direction.UP) {
+        if (this.playerDirection == PlayerDirection.UP) {
 
             this.posY -= step;
 
@@ -61,7 +58,7 @@ public class Player implements Drawable {
                 this.paddle.translate(0, -step);
             }
         }
-        if (this.direction == Direction.DOWN) {
+        if (this.playerDirection == PlayerDirection.DOWN) {
 
             this.posY += step;
             System.out.println(posY);
@@ -73,7 +70,7 @@ public class Player implements Drawable {
             }
         }
 
-        setDirection(null);
+        setPlayerDirection(null);
     }
 
     public Rectangle getRectangle() {
@@ -84,8 +81,8 @@ public class Player implements Drawable {
         paddle.draw();
     }
 
-    public void setDirection(Direction direction) {
-        this.direction = direction;
+    public void setPlayerDirection(PlayerDirection playerDirection) {
+        this.playerDirection = playerDirection;
     }
 
 }
