@@ -1,7 +1,8 @@
-package org.academiadecodigo.tropadelete.charlie;
+package org.academiadecodigo.tropadelete.charlie.GameObjects;
 
 import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Ellipse;
+import org.academiadecodigo.tropadelete.charlie.Utils.Drawable;
 
 public class Ball implements Drawable {
 

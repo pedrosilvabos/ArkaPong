@@ -1,6 +1,7 @@
-package org.academiadecodigo.tropadelete.charlie;
+package org.academiadecodigo.tropadelete.charlie.Utils;
 
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
+import org.academiadecodigo.tropadelete.charlie.GameObjects.Ball;
 
 public class Utils {
 

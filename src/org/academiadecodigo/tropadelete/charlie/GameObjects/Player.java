@@ -1,8 +1,8 @@
-package org.academiadecodigo.tropadelete.charlie;
+package org.academiadecodigo.tropadelete.charlie.GameObjects;
 
-import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
+import org.academiadecodigo.tropadelete.charlie.Utils.Drawable;
 
 public class Player implements Drawable {
 

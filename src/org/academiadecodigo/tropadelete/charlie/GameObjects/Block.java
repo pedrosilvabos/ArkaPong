@@ -1,4 +1,4 @@
-package org.academiadecodigo.tropadelete.charlie;
+package org.academiadecodigo.tropadelete.charlie.GameObjects;
 
 
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;

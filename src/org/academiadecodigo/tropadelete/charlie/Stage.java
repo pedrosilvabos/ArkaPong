@@ -2,6 +2,10 @@ package org.academiadecodigo.tropadelete.charlie;
 
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
+import org.academiadecodigo.tropadelete.charlie.GameObjects.Ball;
+import org.academiadecodigo.tropadelete.charlie.GameObjects.Block;
+import org.academiadecodigo.tropadelete.charlie.GameObjects.Player;
+import org.academiadecodigo.tropadelete.charlie.Utils.Utils;
 
 
 public class Stage {
@@ -10,7 +14,7 @@ public class Stage {
     private final int STAGE_WIDTH = 1680;
 
     private final int BLOCK_WIDTH = 40;
-    private final int BLOCK_HEIGTH = 100;
+    private final int BLOCK_HEIGTH = (STAGE_HEIGHT / 8)-1;
 
     private final int PADDLE_WALL_OFFSET = 30;
     private final int PLAYER1_OFFSET = PADDLE_WALL_OFFSET;
@@ -21,7 +25,6 @@ public class Stage {
     private Player player1;
     private Player player2;
     private Ball ball;
-    private boolean gameEnd;
     private String backgroundSkin;
     private String paddleSkin;
     private String ballSkin;
@@ -33,22 +36,22 @@ public class Stage {
      * Randomly choose a combination of skins for the background, paddle ball and blocks
      */
     public Stage() {
-        int theme = (int) (Math.random() * 4);
+        int theme = (int) (Math.random() * 3);
         System.out.println(theme);
         switch (theme) {
-            case 1:
+            case 0:
                 this.backgroundSkin = "resources/background0.png";
                 this.paddleSkin = "resources/paddle.png";
                 this.ballSkin = "resources/ball0.png";
                 this.blockSkin = "resources/block0.png";
                 break;
-            case 2:
+            case 1:
                 this.backgroundSkin = "resources/background1.png";
                 this.paddleSkin = "resources/paddle.png";
                 this.ballSkin = "resources/ball1.png";
                 this.blockSkin = "resources/block1.png";
                 break;
-            case 3:
+            case 2:
                 this.backgroundSkin = "resources/background2.png";
                 this.paddleSkin = "resources/paddle.png";
                 this.ballSkin = "resources/ball1.png";
@@ -63,25 +66,25 @@ public class Stage {
     /**
      * Initiate the Game
      * <p>
-     * Draw the CANVAS, create the players on each side of the screen and limit their paddle motion.
-     * PADDING so they dont got over the top of the CANVAS;
-     * STAGE_HEIGHT so they dont got under the CANVAS;
+     * Draw the CANVAS, create the players on each side of the screen
      */
     public void init() {
         CANVAS.draw();
         player1 = new Player(PLAYER1_OFFSET, PADDING, STAGE_HEIGHT);
         player2 = new Player(PLAYER2_OFFSET, PADDING, STAGE_HEIGHT);
         new KeyboardListener(player1, player2);
-        makeBlocks(15, 5);
+        makeBlocks(15, 8);
     }
 
     /**
      * Block factory
      * <p>
      * Generates blocks in rows and columns
+     * @params blockCols
+     * @params blockRows
      */
     public void makeBlocks(int blockCols, int blockRows) {
-        blocks = blockMatrix(BLOCK_WIDTH, BLOCK_HEIGTH, blockCols, blockRows, PADDING, STAGE_WIDTH, STAGE_HEIGHT);
+        blocks = blockMatrix(BLOCK_WIDTH, BLOCK_HEIGTH, blockCols, blockRows, PADDING, STAGE_WIDTH);
         chooseBlock(60);
         showBlocks();
     }
@@ -89,7 +92,7 @@ public class Stage {
     /**
      * Start the game
      * <p>
-     * Initiate the thread of the game that will run in cycles redrawing everything every iteration
+     * Initiate the thread of the game
      */
     public void start() {
 
@@ -112,10 +115,15 @@ public class Stage {
     /**
      * Build matrix of blocks
      * <p>
-     * OBS: need some work, fine tuning and twiks - RA
+     * @params blockWidth   block width
+     * @params blockHeigth  block height
+     * @params blockCols    block columns
+     * @params blockRows    block rows, number of rows of blocks
+     * @params padding      block padding, general setting to keep blocks padded inside CANVAS
+     * @params canvasWidth  block padding, general setting to keep blocks inside Canvas
      */
     public Block[] blockMatrix(int blockWidth, int blockHeigth, int blockCols, int blockRows,
-                               int padding, int canvasWidth, int canvasHeigth) {
+                               int padding, int canvasWidth) {
 
         Block[] blocks = new Block[blockCols * blockRows];
         int i = 0;
@@ -133,6 +141,12 @@ public class Stage {
         return blocks;
     }
 
+    /**
+     * Turns blocks on and off
+     * <p>
+     * Randonmly turns blocks on at the start of the game.
+     * @param numBlock the number of active blocks at that time
+     */
     public void chooseBlock(int numBlock) {
         int i = 0;
 
@@ -145,7 +159,11 @@ public class Stage {
             }
         }
     }
-
+    /**
+     * Shows the active blocks
+     * <p>
+     * Draws all the active blocks
+     */
     public void showBlocks() {
 
         for (int i = 0; i < blocks.length; i++) {

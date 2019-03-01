@@ -4,6 +4,8 @@ import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
+import org.academiadecodigo.tropadelete.charlie.GameObjects.Direction;
+import org.academiadecodigo.tropadelete.charlie.GameObjects.Player;
 
 public class KeyboardListener implements KeyboardHandler {
 
