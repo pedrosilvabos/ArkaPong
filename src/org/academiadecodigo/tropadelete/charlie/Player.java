@@ -33,8 +33,6 @@ public class Player implements Drawable {
     public Rectangle generatePaddle() {
 
         Rectangle paddle = new Rectangle(this.playerOffset, posY, 25, 150);
-        paddle.setColor(Color.GREEN);
-        paddle.fill();
 
         return paddle;
     }

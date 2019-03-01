@@ -1,15 +1,13 @@
 package org.academiadecodigo.tropadelete.charlie;
 
-import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 
 public class Stage {
     private final int PADDING = 10;
-    private final int STAGE_HEIGHT = 500;
-    private final int STAGE_WIDTH = 1500;
-
+    private final int STAGE_HEIGHT = 768;
+    private final int STAGE_WIDTH = 1680;
 
     private final int BLOCK_WIDTH = 40;
     private final int BLOCK_HEIGTH = 100;
@@ -17,41 +15,82 @@ public class Stage {
     private final int PADDLE_WALL_OFFSET = 30;
     private final int PLAYER1_OFFSET = PADDLE_WALL_OFFSET;
     private final int PLAYER2_OFFSET = STAGE_WIDTH - PADDLE_WALL_OFFSET;
-    private final Rectangle CANVAS = new Rectangle(PADDING, PADDING, STAGE_WIDTH, 768);
+    private final Rectangle CANVAS = new Rectangle(PADDING, PADDING, STAGE_WIDTH, STAGE_HEIGHT);
 
-    private int counter = 0;
     private Block[] blocks;
     private Player player1;
     private Player player2;
     private Ball ball;
     private boolean gameEnd;
+    private String backgroundSkin;
+    private String paddleSkin;
+    private String ballSkin;
+    private String blockSkin;
 
-    private String backgroundName;
-
+    /**
+     * Create and skin the stage
+     * <p>
+     * Randomly choose a combination of skins for the background, paddle ball and blocks
+     */
     public Stage() {
-        int random = (int) (Math.random() * 2);
+        int theme = (int) (Math.random() * 4);
+        System.out.println(theme);
+        switch (theme) {
+            case 1:
+                this.backgroundSkin = "resources/background0.png";
+                this.paddleSkin = "resources/paddle.png";
+                this.ballSkin = "resources/ball0.png";
+                this.blockSkin = "resources/block0.png";
+                break;
+            case 2:
+                this.backgroundSkin = "resources/background1.png";
+                this.paddleSkin = "resources/paddle.png";
+                this.ballSkin = "resources/ball1.png";
+                this.blockSkin = "resources/block1.png";
+                break;
+            case 3:
+                this.backgroundSkin = "resources/background2.png";
+                this.paddleSkin = "resources/paddle.png";
+                this.ballSkin = "resources/ball1.png";
+                this.blockSkin = "resources/block2.png";
+                break;
 
-        String[] backgrounds = {
-                "resources/background2.png",
-                "resources/background3.png"
-        };
-        this.backgroundName = backgrounds[random];
-        Picture background = new Picture(PADDING, PADDING, this.backgroundName);
+        }
+        Picture background = new Picture(PADDING, PADDING, this.backgroundSkin);
         background.draw();
     }
 
+    /**
+     * Initiate the Game
+     * <p>
+     * Draw the CANVAS, create the players on each side of the screen and limit their paddle motion.
+     * PADDING so they dont got over the top of the CANVAS;
+     * STAGE_HEIGHT so they dont got under the CANVAS;
+     */
     public void init() {
         CANVAS.draw();
         player1 = new Player(PLAYER1_OFFSET, PADDING, STAGE_HEIGHT);
         player2 = new Player(PLAYER2_OFFSET, PADDING, STAGE_HEIGHT);
         new KeyboardListener(player1, player2);
+        makeBlocks(15, 5);
+    }
 
-        // build matrix
-        blocks = blockMatrix(BLOCK_WIDTH, BLOCK_HEIGTH, 15, 8, PADDING, STAGE_WIDTH, STAGE_HEIGHT);
+    /**
+     * Block factory
+     * <p>
+     * Generates blocks in rows and columns
+     */
+    public void makeBlocks(int blockCols, int blockRows) {
+        blocks = blockMatrix(BLOCK_WIDTH, BLOCK_HEIGTH, blockCols, blockRows, PADDING, STAGE_WIDTH, STAGE_HEIGHT);
         chooseBlock(60);
         showBlocks();
     }
 
+    /**
+     * Start the game
+     * <p>
+     * Initiate the thread of the game that will run in cycles redrawing everything every iteration
+     */
     public void start() {
 
         while (true) {
@@ -73,7 +112,7 @@ public class Stage {
     /**
      * Build matrix of blocks
      * <p>
-     * OBS: need some work, fine tunning and twiks - RA
+     * OBS: need some work, fine tuning and twiks - RA
      */
     public Block[] blockMatrix(int blockWidth, int blockHeigth, int blockCols, int blockRows,
                                int padding, int canvasWidth, int canvasHeigth) {
@@ -111,18 +150,8 @@ public class Stage {
 
         for (int i = 0; i < blocks.length; i++) {
             if (blocks[i].isActive()) {
-
-                // draw the block
-                Rectangle rectangle = new Rectangle(blocks[i].getPositionX(), blocks[i].getPositionY(),
-                        blocks[i].getWidth(), blocks[i].getHeigth());
-                rectangle.setColor(Color.RED); // need ramdom color here
-                rectangle.fill();
-
-                // make border around the block
-                Rectangle border = new Rectangle(blocks[i].getPositionX(), blocks[i].getPositionY(),
-                        blocks[i].getWidth(), blocks[i].getHeigth());
-                border.setColor(Color.WHITE);
-                border.draw();
+                Picture picture = new Picture(blocks[i].getPositionX(), blocks[i].getPositionY(), this.blockSkin);
+                picture.draw();
             }
         }
     }
