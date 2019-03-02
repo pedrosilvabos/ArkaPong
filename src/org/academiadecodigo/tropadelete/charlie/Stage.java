@@ -16,17 +16,21 @@ public class Stage {
     private final int BLOCK_WIDTH = 40;
     private final int BLOCK_HEIGTH = (STAGE_HEIGHT / 8)-1;
 
-    private final int PADDLE_WALL_OFFSET = 30;
-    private final int PLAYER1_OFFSET = PADDLE_WALL_OFFSET;
-    private final int PLAYER2_OFFSET = STAGE_WIDTH - PADDLE_WALL_OFFSET;
+    private final int PADDLE_WALL_OFFSET = 40;
+    private final int PLAYER1_OFFSET = PADDING + PADDLE_WALL_OFFSET;
+    private final int PLAYER2_OFFSET = PADDING*2 + STAGE_WIDTH - PADDLE_WALL_OFFSET - BLOCK_WIDTH;
     private final Rectangle CANVAS = new Rectangle(PADDING, PADDING, STAGE_WIDTH, STAGE_HEIGHT);
 
+    private final String RESOURCES ="resources/themes/";
+
     private Block[] blocks;
-    private Player player1;
-    private Player player2;
-    private Ball ball;
+    private Player  player1;
+    private Player  player2;
+    private Ball    ball;
+
     private String backgroundSkin;
-    private String paddleSkin;
+    private String paddleLeftSkin;
+    private String paddleRightSkin;
     private String ballSkin;
     private String blockSkin;
 
@@ -36,29 +40,18 @@ public class Stage {
      * Randomly choose a combination of skins for the background, paddle ball and blocks
      */
     public Stage() {
-        int theme = (int) (Math.random() * 3);
-        System.out.println(theme);
-        switch (theme) {
-            case 0:
-                this.backgroundSkin = "resources/background0.png";
-                this.paddleSkin = "resources/paddle.png";
-                this.ballSkin = "resources/ball0.png";
-                this.blockSkin = "resources/block0.png";
-                break;
-            case 1:
-                this.backgroundSkin = "resources/background1.png";
-                this.paddleSkin = "resources/paddle.png";
-                this.ballSkin = "resources/ball1.png";
-                this.blockSkin = "resources/block1.png";
-                break;
-            case 2:
-                this.backgroundSkin = "resources/background2.png";
-                this.paddleSkin = "resources/paddle.png";
-                this.ballSkin = "resources/ball1.png";
-                this.blockSkin = "resources/block2.png";
-                break;
+        int theme  = 2; //(int) (Math.random() * 3);
+        int option = (int) (Math.random() * 3);
 
-        }
+        // só para testes
+        if (theme == 2) {option = 0;}
+
+        this.backgroundSkin  = RESOURCES+theme+"/images/background" +option+".png";
+        this.paddleLeftSkin  = RESOURCES+theme+"/images/paddleLeft" +option+".png";
+        this.paddleRightSkin = RESOURCES+theme+"/images/paddleRight"+option+".png";
+        this.ballSkin        = RESOURCES+theme+"/images/ball"       +option+".png";
+        this.blockSkin       = RESOURCES+theme+"/images/block"      +option+".png";
+
         Picture background = new Picture(PADDING, PADDING, this.backgroundSkin);
         background.draw();
     }
@@ -70,8 +63,10 @@ public class Stage {
      */
     public void init() {
         CANVAS.draw();
-        player1 = new Player(PLAYER1_OFFSET, PADDING, STAGE_HEIGHT);
-        player2 = new Player(PLAYER2_OFFSET, PADDING, STAGE_HEIGHT);
+
+        player1 = new Player(PLAYER1_OFFSET, PADDING+((STAGE_HEIGHT-150)/2), STAGE_HEIGHT, paddleLeftSkin ); // LEFT
+        player2 = new Player(PLAYER2_OFFSET, PADDING+((STAGE_HEIGHT-150)/2), STAGE_HEIGHT, paddleRightSkin); // RIGHT
+
         new KeyboardListener(player1, player2);
         makeBlocks(15, 8);
     }
@@ -85,7 +80,7 @@ public class Stage {
      */
     public void makeBlocks(int blockCols, int blockRows) {
         blocks = blockMatrix(BLOCK_WIDTH, BLOCK_HEIGTH, blockCols, blockRows, PADDING, STAGE_WIDTH);
-        chooseBlock(60);
+        chooseBlock(20);
         showBlocks();
     }
 
@@ -134,7 +129,9 @@ public class Stage {
             for (int row = 0; row < blockRows; row++) {
                 int y = padding + (row * blockHeigth);
 
-                blocks[i] = new Block(x, y, blockWidth, blockHeigth);
+                blocks[i] = new Block(x, y, blockWidth, blockHeigth,
+                            new Picture(x, y, this.blockSkin));
+
                 i++;
             }
         }
@@ -165,6 +162,21 @@ public class Stage {
      * Draws all the active blocks
      */
     public void showBlocks() {
+
+        for (int i = 0; i < blocks.length; i++) {
+            if (blocks[i].isActive()) {
+                Picture picture = blocks[i].getPicture();
+                picture.draw();
+            }
+        }
+    }
+
+     /**
+     * Shows the active blocks
+     * <p>
+     * Draws all the active blocks
+     */
+    public void hideBlocks() {
 
         for (int i = 0; i < blocks.length; i++) {
             if (blocks[i].isActive()) {

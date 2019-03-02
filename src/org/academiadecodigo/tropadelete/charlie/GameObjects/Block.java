@@ -2,6 +2,7 @@ package org.academiadecodigo.tropadelete.charlie.GameObjects;
 
 
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
+import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class Block {
 
@@ -12,12 +13,15 @@ public class Block {
     private boolean active;
     private Rectangle rectangle;
 
-    public Block(int x, int y, int width, int heigth) {
+    private Picture picture;
+
+    public Block(int x, int y, int width, int heigth, Picture picture) {
         this.x = x;
         this.y = y;
         this.width  = width;
         this.heigth = heigth;
         this.active = false;
+        this.picture = picture;
 
 
     }
@@ -59,4 +63,7 @@ public class Block {
         rectangle.fill();
     }
 
+    public Picture getPicture() {
+        return this.picture;
+    }
 }
