@@ -2,10 +2,10 @@ package org.academiadecodigo.tropadelete.charlie;
 
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
+import org.academiadecodigo.tropadelete.Utils;
 import org.academiadecodigo.tropadelete.charlie.GameObjects.Ball;
 import org.academiadecodigo.tropadelete.charlie.GameObjects.Block;
 import org.academiadecodigo.tropadelete.charlie.GameObjects.Player;
-import org.academiadecodigo.tropadelete.charlie.Utils.Utils;
 
 
 public class Stage {
@@ -74,6 +74,11 @@ public class Stage {
         player2 = new Player(PLAYER2_OFFSET, PADDING, STAGE_HEIGHT);
         new KeyboardListener(player1, player2);
         makeBlocks(15, 8);
+
+        /** For testing purposes! */
+        for (int i = 0 ; i < blocks.length ; i++) {
+            blocks[i] = new Block(((1280 / 2) - 300) + (i * 30), (768 / 2) + 20);
+        }
     }
 
     /**
@@ -102,7 +107,24 @@ public class Stage {
                 player1.move();
                 player2.move();
                 if (ball == null) {
-                    ball = Utils.startBall(CANVAS);
+                    //ball = Utils.startBall(CANVAS);
+                   ball = Utils.startBall(CANVAS);
+                }
+                CollisionDetector.ballCollidesWithWalls(ball, CANVAS);
+
+                for (Block block : blocks) {
+
+                    if (!block.isHit()) {
+                        CollisionDetector.ballCollidesWithBlocks(ball, block); /** Testing this now. */
+                    }
+                }
+
+                CollisionDetector.ballCollidesWithPlayer(ball, player1);
+                CollisionDetector.ballCollidesWithPlayer(ball, player2);
+                for (Block block : blocks) {
+                    if (!block.isHit()) {
+                        block.draw();
+                    }
                 }
                 ball.move();
                 ball.draw();

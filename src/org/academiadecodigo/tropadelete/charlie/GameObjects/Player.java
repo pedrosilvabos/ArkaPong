@@ -2,15 +2,18 @@ package org.academiadecodigo.tropadelete.charlie.GameObjects;
 
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
-import org.academiadecodigo.tropadelete.charlie.Utils.Drawable;
+import org.academiadecodigo.tropadelete.charlie.Drawable;
+import org.academiadecodigo.tropadelete.charlie.PlayerNumber;
+import org.academiadecodigo.tropadelete.charlie.PlayerDirection;
 
 public class Player implements Drawable {
 
     private int posY;
     private int step;
-    private Direction direction;
+    private PlayerDirection playerDirection;
     private boolean hasLost;
 
+    private PlayerNumber playerNumber;
     private Rectangle paddle;
     private Picture paddleSkin;
     private int minHeight;
@@ -28,6 +31,7 @@ public class Player implements Drawable {
         this.posY = (this.minHeight / 2) + (this.paddleHeight / 2);
         this.paddle = generatePaddle();
         this.paddleSkin = skinPaddle();
+        this.playerNumber = playerNumber;
     }
 
     public Rectangle generatePaddle() {
@@ -43,11 +47,14 @@ public class Player implements Drawable {
 
         return paddle;
     }
+    public PlayerNumber getPlayerNumber() {
+        return playerNumber;
+    }
 
     public void move() {
 
         //use switch!!!
-        if (this.direction == Direction.UP) {
+        if (this.playerDirection == PlayerDirection.UP) {
             this.posY -= step;
             if (posY < 13) {              //CHECK THIS SHIT AND PUT IN PROPERTIES
                 this.posY = 13;
@@ -58,7 +65,7 @@ public class Player implements Drawable {
                 this.paddleSkin.draw();
             }
         }
-        if (this.direction == Direction.DOWN) {
+        if (this.playerDirection == PlayerDirection.DOWN) {
             this.posY += step;
 
             if (posY > 636) {              //CHECK THIS SHIT AND PUT IN PROPERTIES
@@ -70,19 +77,18 @@ public class Player implements Drawable {
                 this.paddleSkin.draw();
             }
         }
-        setDirection(null);
+        setPlayerDirection(null);
     }
-
+    public Rectangle getRectangle() {
+        return paddle;
+    }
     public void draw() {
         paddle.draw();
     }
 
-    public void setDirection(Direction direction) {
-        this.direction = direction;
+    public void setPlayerDirection(PlayerDirection playerDirection) {
+        this.playerDirection = playerDirection;
     }
 
-    public int getPosY(){
-        return posY;
-    }
 
 }

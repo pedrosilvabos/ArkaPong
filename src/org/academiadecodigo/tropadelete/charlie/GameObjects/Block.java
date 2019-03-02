@@ -1,6 +1,7 @@
 package org.academiadecodigo.tropadelete.charlie.GameObjects;
 
 
+import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 
 public class Block {
@@ -10,6 +11,7 @@ public class Block {
     private int     width;
     private int     heigth;
     private boolean active;
+    private boolean isHit;
     private Rectangle rectangle;
 
     public Block(int x, int y, int width, int heigth) {
@@ -18,6 +20,9 @@ public class Block {
         this.width  = width;
         this.heigth = heigth;
         this.active = false;
+        rectangle = new Rectangle();
+        rectangle.setColor(Color.BLUE);
+        rectangle.fill();
 
 
     }
@@ -58,5 +63,27 @@ public class Block {
         this.active = true;
         rectangle.fill();
     }
+    /** For testing purposes. */
+    public Block(int x, int y) {
+        this.x = x;
+        this.y = y;
+        rectangle = new Rectangle(x, y, 60, 60);
+        rectangle.setColor(Color.BLUE);
+        rectangle.fill();
+    }
+    public void setHit(){
+        this.isHit = true;
+        rectangle.delete();
+    }
+    public Rectangle getRectangle() {
+        return rectangle;
+    }
 
+    public boolean isHit() {
+        return isHit;
+    }
+
+    public void draw() {
+        rectangle.fill();
+    }
 }

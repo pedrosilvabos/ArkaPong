@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ArkaPong.iml" filepath="$PROJECT_DIR$/ArkaPong.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pedrosilvabos-skeleton.iml" filepath="$PROJECT_DIR$/pedrosilvabos-skeleton.iml" />
     </modules>
   </component>
 </project>
