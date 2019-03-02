@@ -4,7 +4,7 @@ import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
-import org.academiadecodigo.tropadelete.charlie.GameObjects.Direction;
+import org.academiadecodigo.tropadelete.charlie.GameObjects.Ball;
 import org.academiadecodigo.tropadelete.charlie.GameObjects.Player;
 
 public class KeyboardListener implements KeyboardHandler {
@@ -12,6 +12,7 @@ public class KeyboardListener implements KeyboardHandler {
     private int[] movements;
     private double posX;
     private double posY;
+
     private Player player1;
     private Player player2;
 
@@ -21,6 +22,7 @@ public class KeyboardListener implements KeyboardHandler {
         this.player2 = player2;
 
         int[] movements = {
+
                 KeyboardEvent.KEY_UP,
                 KeyboardEvent.KEY_DOWN,
                 KeyboardEvent.KEY_A,
@@ -28,8 +30,10 @@ public class KeyboardListener implements KeyboardHandler {
         };
 
         for (int i = 0; i < movements.length; i++) {
+
             KeyboardEvent move = new KeyboardEvent();
             move.setKey(movements[i]);
+
             move.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
             Keyboard keyboard = new Keyboard(this);
             keyboard.addEventListener(move);
@@ -39,6 +43,17 @@ public class KeyboardListener implements KeyboardHandler {
 
     @Override
     public void keyPressed(KeyboardEvent key) {
+
+        if (Stage.getBall() != null && Stage.getBall().isStatic()) {
+
+            if (Stage.getBall().getStartingPlayer().equals(PlayerNumber.ONE)) {
+                checkPlayerOne(Stage.getBall(), key);
+            }
+
+            if (Stage.getBall().getStartingPlayer().equals(PlayerNumber.TWO)) {
+                checkPlayerTwo(Stage.getBall(), key);
+            }
+        }
 
         switch (key.getKey()) {
             case KeyboardEvent.KEY_UP:
@@ -68,6 +83,20 @@ public class KeyboardListener implements KeyboardHandler {
 
         if (key.getKey() == KeyboardEvent.KEY_A || key.getKey() == KeyboardEvent.KEY_Z) {
             player2.setPlayerDirection(null);
+        }
+    }
+
+    private static void checkPlayerOne(Ball ball, KeyboardEvent key) {
+
+        if (key.getKey() == KeyboardEvent.KEY_A || key.getKey() == KeyboardEvent.KEY_Z) {
+            ball.removeStatic();
+        }
+    }
+
+    private static void checkPlayerTwo(Ball ball, KeyboardEvent key) {
+
+        if (key.getKey() == KeyboardEvent.KEY_UP || key.getKey() == KeyboardEvent.KEY_DOWN) {
+            ball.removeStatic();
         }
     }
 

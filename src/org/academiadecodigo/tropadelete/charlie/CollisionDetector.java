@@ -26,18 +26,31 @@ public class CollisionDetector {
         if (player.getPlayerNumber() == PlayerNumber.ONE) {
 
             if (p1CheckX(eBall, rPlayer) && checkY(eBall, rPlayer)) {
-                System.out.println("BallY: " + eBall.getY() + " PadY: " + rPlayer.getY());
-                ball.setDeltaByBouncePlayer();
+                collideAndInvert(ball);
+                return;
             }
+
+            ball.setColliding(false);
             return;
         }
 
         if (player.getPlayerNumber() == PlayerNumber.TWO) {
 
             if (p2CheckX(eBall, rPlayer) && checkY(eBall, rPlayer)) {
-                System.out.println("BallY: " + eBall.getY() + " PadY: " + rPlayer.getY());
-                ball.setDeltaByBouncePlayer();
+                collideAndInvert(ball);
+                return;
             }
+
+            ball.setColliding(false);
+        }
+    }
+
+    private static void collideAndInvert(Ball ball) {
+
+        if (!ball.isColliding()) {
+
+            ball.setColliding(true);
+            ball.setDeltaByBouncePlayer();
         }
     }
 
@@ -146,6 +159,22 @@ public class CollisionDetector {
     public static boolean pointWithinBlock(Rectangle block, int x, int y) {
         return ( (x <= block.getX() + block.getWidth() && x >= block.getX()) &&
                  (y <= block.getY() + block.getHeight() && y >= block.getY()) );
+    }
+
+
+    public static PlayerNumber ballCollisionGoal(Ellipse ball, Rectangle stage) {
+
+        PlayerNumber pn = PlayerNumber.NONE;
+
+        if (ball.getX() <= stage.getX()) {
+            pn = PlayerNumber.ONE;
+        }
+
+        if (ball.getX() + ball.getWidth() >= stage.getX() + stage.getWidth()) {
+            pn = PlayerNumber.TWO;
+        }
+
+        return pn;
     }
 
 }

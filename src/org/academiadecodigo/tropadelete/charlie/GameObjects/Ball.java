@@ -3,6 +3,7 @@ package org.academiadecodigo.tropadelete.charlie.GameObjects;
 import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Ellipse;
 import org.academiadecodigo.tropadelete.charlie.Drawable;
+import org.academiadecodigo.tropadelete.charlie.PlayerNumber;
 
 public class Ball implements Drawable {
 
@@ -15,14 +16,20 @@ public class Ball implements Drawable {
     private Direction direction;
     private static int BOUND = 20;
 
+    private boolean colliding;
+    private boolean isStatic;
+    private PlayerNumber startingPlayer;
+
     //initialize the ball with a motion
     //ball starts at the center of the screen
-    public Ball(int x, int y) {
+    public Ball(int x, int y, PlayerNumber playerNumber) {
         this.x = x;
         this.y = y;
 
         ellipse = new Ellipse(x, y, 20, 20);
         ellipse.setColor(Color.PINK);
+        isStatic = true;
+        startingPlayer = playerNumber;
 
         dx = dy = 0;
     }
@@ -45,6 +52,8 @@ public class Ball implements Drawable {
     public void draw() {
         ellipse.fill();
     }
+
+    public void delete() {ellipse.delete();}
 
     /**
      * Returns the Ellipse shape of this Ball.
@@ -234,4 +243,23 @@ public class Ball implements Drawable {
         return BOUND;
     }
 
+    public boolean isStatic() {
+        return isStatic;
+    }
+
+    public void removeStatic() {
+        isStatic = false;
+    }
+
+    public PlayerNumber getStartingPlayer() {
+        return startingPlayer;
+    }
+
+    public boolean isColliding() {
+        return colliding;
+    }
+
+    public void setColliding(boolean colliding) {
+        this.colliding = colliding;
+    }
 }

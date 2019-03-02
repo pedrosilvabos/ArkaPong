@@ -24,7 +24,7 @@ public class Stage {
     private Block[] blocks;
     private Player player1;
     private Player player2;
-    private Ball ball;
+    private  static Ball ball;
     private String backgroundSkin;
     private String paddleSkin;
     private String ballSkin;
@@ -76,6 +76,7 @@ public class Stage {
         CANVAS.draw();
         player1 = new Player(PLAYER1_OFFSET, PADDING, STAGE_HEIGHT, PlayerNumber.ONE);
         player2 = new Player(PLAYER2_OFFSET, PADDING, STAGE_HEIGHT, PlayerNumber.TWO);
+
         new KeyboardListener(player1, player2);
         makeBlocks(15, 8);
 
@@ -140,8 +141,21 @@ public class Stage {
                     }
                 }
 
-                ball.move();
-                ball.draw();
+                if (ball != null) {
+
+                    if (!ball.isStatic()) {
+                        ball.move();
+                    }
+
+                    ball.draw();
+                }
+
+
+
+                if (Utils.checkVictoryCondition(ball, CANVAS, player1, player2)) {
+                    ball.delete();
+                    ball = null;
+                }
 
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -212,6 +226,10 @@ public class Stage {
                 picture.draw();
             }
         }
+    }
+
+    public  static Ball getBall() {
+        return ball;
     }
 }
 

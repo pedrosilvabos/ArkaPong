@@ -34,7 +34,7 @@ public class Utils {
             int startX = rPlayer2.getX() - ballPaddleDistance - Ball.getBound();
             startAngle = startAngleUp ? 180 + 30 : 180 - 30;
 
-            ball = new Ball(startX, startY);
+            ball = new Ball(startX, startY, PlayerNumber.TWO);
         }
 
         else {
@@ -42,11 +42,28 @@ public class Utils {
             int startX = rPlayer1.getX() + rPlayer1.getWidth() + ballPaddleDistance;
             startAngle = startAngleUp ? 30 : -30;
 
-            ball = new Ball(startX, startY);
+            ball = new Ball(startX, startY, PlayerNumber.ONE);
         }
 
         ball.setDeltaByAngle(startAngle);
         return ball;
+    }
+
+    public static boolean checkVictoryCondition(Ball ball, Rectangle canvas, Player player1, Player player2) {
+
+        PlayerNumber playerNumber = CollisionDetector.ballCollisionGoal(ball.getEllipse(), canvas);
+
+        if (playerNumber.equals(PlayerNumber.ONE)) {
+            player1.losePoint();
+            return true;
+        }
+
+        if (playerNumber.equals(PlayerNumber.TWO)) {
+            player2.losePoint();
+            return true;
+        }
+
+        return false;
     }
 
 
