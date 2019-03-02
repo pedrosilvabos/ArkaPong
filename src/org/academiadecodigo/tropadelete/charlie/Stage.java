@@ -1,6 +1,8 @@
 package org.academiadecodigo.tropadelete.charlie;
 
+import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
+import org.academiadecodigo.simplegraphics.graphics.Text;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 import org.academiadecodigo.tropadelete.charlie.GameObjects.Ball;
 import org.academiadecodigo.tropadelete.charlie.GameObjects.Block;
@@ -29,6 +31,10 @@ public class Stage {
     private String paddleSkin;
     private String ballSkin;
     private String blockSkin;
+
+    private final String pressStart = "Press Movement Key to start the ball!";
+    private Rectangle backgroundRect;
+    private Text initMessage;
 
     /**
      * Create and skin the stage
@@ -86,6 +92,12 @@ public class Stage {
             blocks[i] = new Block(((1280 / 2) - 300) + (i * 30), (768 / 2) + 20);
         }
         */
+
+        initMessage = new Text(PADDING + (STAGE_WIDTH / 2) - 60, PADDING + (STAGE_HEIGHT / 2) + 30, pressStart );
+        initMessage.grow(20, 20);
+        initMessage.setColor(Color.WHITE);
+
+        backgroundRect = new Rectangle(initMessage.getX() - 10, initMessage.getY() - 10, initMessage.getWidth() - 20, initMessage.getHeight() + 10);
     }
 
     /**
@@ -143,7 +155,14 @@ public class Stage {
 
                 if (ball != null) {
 
+                    if (ball.isStatic()) {
+                        backgroundRect.fill();
+                        initMessage.draw();
+                    }
+
                     if (!ball.isStatic()) {
+                        backgroundRect.delete();
+                        initMessage.delete();
                         ball.move();
                     }
 
