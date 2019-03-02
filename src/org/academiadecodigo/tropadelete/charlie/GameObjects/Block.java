@@ -3,6 +3,8 @@ package org.academiadecodigo.tropadelete.charlie.GameObjects;
 
 import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
+import org.academiadecodigo.simplegraphics.pictures.Picture;
+
 
 public class Block {
 
@@ -14,7 +16,7 @@ public class Block {
     private boolean isHit;
     private Rectangle rectangle;
 
-    public Block(int x, int y, int width, int heigth) {
+    public Block(int x, int y, int width, int heigth, Picture picture) {
         this.x = x;
         this.y = y;
         this.width  = width;

@@ -21,7 +21,7 @@ public class Player implements Drawable {
     private int paddleHeight;
     private int playerOffset;
 
-    public Player(int offset, int posY, int stageHeight, PlayerNumber pn) {
+    public Player(int offset, int posY, int stageHeight, PlayerNumber pn, String picture) {
 
         this.step = 12; //paddle jumps
         this.playerOffset = offset;
@@ -31,7 +31,7 @@ public class Player implements Drawable {
         this.maxHeight = stageHeight - this.paddleHeight;
         this.posY = (this.minHeight / 2) + (this.paddleHeight / 2);
         this.paddle = generatePaddle();
-        this.paddleSkin = skinPaddle();
+        this.paddleSkin = skinPaddle(picture);
         this.playerNumber = pn;
     }
 
@@ -42,9 +42,9 @@ public class Player implements Drawable {
         return paddle;
     }
 
-    public Picture skinPaddle() {
+    public Picture skinPaddle(String picture) {
         //make pictures names number and random them
-        Picture paddle = new Picture(this.playerOffset, posY, "resources/paddle.png");
+        Picture paddle = new Picture(this.playerOffset, posY, picture);
 
         return paddle;
     }

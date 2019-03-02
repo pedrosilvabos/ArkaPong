@@ -6,7 +6,7 @@ import org.academiadecodigo.tropadelete.charlie.Drawable;
 
 public class Ball implements Drawable {
 
-    private final int SPEED = 10;
+    private final int SPEED = 25;
     private int x;
     private int y;
     private int dx;
