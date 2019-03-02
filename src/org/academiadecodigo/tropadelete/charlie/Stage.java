@@ -2,7 +2,6 @@ package org.academiadecodigo.tropadelete.charlie;
 
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
-import org.academiadecodigo.tropadelete.Utils;
 import org.academiadecodigo.tropadelete.charlie.GameObjects.Ball;
 import org.academiadecodigo.tropadelete.charlie.GameObjects.Block;
 import org.academiadecodigo.tropadelete.charlie.GameObjects.Player;
@@ -15,7 +14,7 @@ public class Stage {
     private final int STAGE_WIDTH = 1680;
 
     private final int BLOCK_WIDTH = 40;
-    private final int BLOCK_HEIGTH = (STAGE_HEIGHT / 8)-1;
+    private final int BLOCK_HEIGTH = (STAGE_HEIGHT / 8) - 1;
 
     private final int PADDLE_WALL_OFFSET = 30;
     private final int PLAYER1_OFFSET = PADDLE_WALL_OFFSET;
@@ -92,6 +91,7 @@ public class Stage {
      * Block factory
      * <p>
      * Generates blocks in rows and columns
+     *
      * @params blockCols
      * @params blockRows
      */
@@ -118,7 +118,7 @@ public class Stage {
                 player2.move();
 
                 if (ball == null) {
-                   ball = Utils.startBall(CANVAS);
+                    ball = Utils.startBall(player1, player2);
                 }
 
                 CollisionDetector.ballCollidesWithWalls(ball, CANVAS);
@@ -152,6 +152,7 @@ public class Stage {
     /**
      * Build matrix of blocks
      * <p>
+     *
      * @params blockWidth   block width
      * @params blockHeigth  block height
      * @params blockCols    block columns
@@ -182,6 +183,7 @@ public class Stage {
      * Turns blocks on and off
      * <p>
      * Randonmly turns blocks on at the start of the game.
+     *
      * @param numBlock the number of active blocks at that time
      */
     public void chooseBlock(int numBlock) {
@@ -196,6 +198,7 @@ public class Stage {
             }
         }
     }
+
     /**
      * Shows the active blocks
      * <p>

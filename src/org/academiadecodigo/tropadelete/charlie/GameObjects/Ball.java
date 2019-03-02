@@ -13,6 +13,7 @@ public class Ball implements Drawable {
     private int dy;
     private Ellipse ellipse;
     private Direction direction;
+    private static int BOUND = 20;
 
     //initialize the ball with a motion
     //ball starts at the center of the screen
@@ -227,6 +228,10 @@ public class Ball implements Drawable {
         if (dx < 0 && dy < 0) {
             direction = Direction.UPPER_LEFT;
         }
+    }
+
+    public static int getBound() {
+        return BOUND;
     }
 
 }

@@ -1,7 +1,8 @@
-package org.academiadecodigo.tropadelete;
+package org.academiadecodigo.tropadelete.charlie;
 
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.tropadelete.charlie.GameObjects.Ball;
+import org.academiadecodigo.tropadelete.charlie.GameObjects.Player;
 
 import java.util.Random;
 
@@ -14,25 +15,37 @@ public class Utils {
      *
      * @return the ball centered in Stage and with correct delta values
      */
-    public static Ball startBall(Rectangle canvas) {
+    public static Ball startBall(Player player1, Player player2) {
 
-        // set ball to center
-        Ball ball = new Ball(canvas.getX() + (canvas.getWidth() / 2), canvas.getY() + (canvas.getHeight() / 2));
+        int ballPaddleDistance = 50;
+        boolean isFacingPlayerTwo = new Random().nextBoolean();
+        boolean startAngleUp = new Random().nextBoolean();
+        int startAngle;
 
-        // wait for 1 to 2 seconds
+        Rectangle rPlayer1 = player1.getRectangle();
+        Rectangle rPlayer2 = player2.getRectangle();
 
-        Random random = new Random();
-        boolean isRight = random.nextBoolean();
+        Ball ball;
 
-        if (isRight) {
-            ball.setDeltaByAngle(30);
-        } else {
-            ball.setDeltaByAngle(180 - 30);
+        int startY = rPlayer1.getY() + (rPlayer1.getHeight() / 2) - (Ball.getBound() / 2);
+
+        if (isFacingPlayerTwo) {
+
+            int startX = rPlayer2.getX() - ballPaddleDistance - Ball.getBound();
+            startAngle = startAngleUp ? 180 + 30 : 180 - 30;
+
+            ball = new Ball(startX, startY);
         }
 
-        System.out.println("X: " + Math.cos(Math.toRadians(150)));
+        else {
 
-        System.out.println("isRight: " + isRight);
+            int startX = rPlayer1.getX() + rPlayer1.getWidth() + ballPaddleDistance;
+            startAngle = startAngleUp ? 30 : -30;
+
+            ball = new Ball(startX, startY);
+        }
+
+        ball.setDeltaByAngle(startAngle);
         return ball;
     }
 
