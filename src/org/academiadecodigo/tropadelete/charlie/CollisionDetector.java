@@ -28,8 +28,8 @@ public class CollisionDetector {
             if (p1CheckX(eBall, rPlayer) && checkY(eBall, rPlayer)) {
                 System.out.println("BallY: " + eBall.getY() + " PadY: " + rPlayer.getY());
                 ball.setDeltaByBouncePlayer();
-                return;
             }
+            return;
         }
 
         if (player.getPlayerNumber() == PlayerNumber.TWO) {
@@ -55,13 +55,6 @@ public class CollisionDetector {
     private static boolean checkY(Ellipse eBall, Rectangle rPlayer) {
 
         return eBall.getY() + eBall.getHeight() >= rPlayer.getY() && eBall.getY() <= rPlayer.getY() + rPlayer.getHeight();
-    }
-
-
-    private static void playerBounce(Ball ball, Player player) {
-
-
-
     }
 
     /**

@@ -21,7 +21,8 @@ public class Player implements Drawable {
     private int paddleHeight;
     private int playerOffset;
 
-    public Player(int offset, int posY, int stageHeight) {
+    public Player(int offset, int posY, int stageHeight, PlayerNumber pn) {
+
         this.step = 12; //paddle jumps
         this.playerOffset = offset;
         this.minHeight = stageHeight;
@@ -31,7 +32,7 @@ public class Player implements Drawable {
         this.posY = (this.minHeight / 2) + (this.paddleHeight / 2);
         this.paddle = generatePaddle();
         this.paddleSkin = skinPaddle();
-        this.playerNumber = playerNumber;
+        this.playerNumber = pn;
     }
 
     public Rectangle generatePaddle() {

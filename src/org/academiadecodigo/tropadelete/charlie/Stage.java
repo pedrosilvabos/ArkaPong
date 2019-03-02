@@ -9,6 +9,7 @@ import org.academiadecodigo.tropadelete.charlie.GameObjects.Player;
 
 
 public class Stage {
+
     private final int PADDING = 10;
     private final int STAGE_HEIGHT = 768;
     private final int STAGE_WIDTH = 1680;
@@ -39,18 +40,21 @@ public class Stage {
         int theme = (int) (Math.random() * 3);
         System.out.println(theme);
         switch (theme) {
+
             case 0:
                 this.backgroundSkin = "resources/background0.png";
                 this.paddleSkin = "resources/paddle.png";
                 this.ballSkin = "resources/ball0.png";
                 this.blockSkin = "resources/block0.png";
                 break;
+
             case 1:
                 this.backgroundSkin = "resources/background1.png";
                 this.paddleSkin = "resources/paddle.png";
                 this.ballSkin = "resources/ball1.png";
                 this.blockSkin = "resources/block1.png";
                 break;
+
             case 2:
                 this.backgroundSkin = "resources/background2.png";
                 this.paddleSkin = "resources/paddle.png";
@@ -69,16 +73,19 @@ public class Stage {
      * Draw the CANVAS, create the players on each side of the screen
      */
     public void init() {
+
         CANVAS.draw();
-        player1 = new Player(PLAYER1_OFFSET, PADDING, STAGE_HEIGHT);
-        player2 = new Player(PLAYER2_OFFSET, PADDING, STAGE_HEIGHT);
+        player1 = new Player(PLAYER1_OFFSET, PADDING, STAGE_HEIGHT, PlayerNumber.ONE);
+        player2 = new Player(PLAYER2_OFFSET, PADDING, STAGE_HEIGHT, PlayerNumber.TWO);
         new KeyboardListener(player1, player2);
         makeBlocks(15, 8);
 
-        /** For testing purposes! */
+        /*
+        // For testing purposes!
         for (int i = 0 ; i < blocks.length ; i++) {
             blocks[i] = new Block(((1280 / 2) - 300) + (i * 30), (768 / 2) + 20);
         }
+        */
     }
 
     /**
@@ -89,6 +96,7 @@ public class Stage {
      * @params blockRows
      */
     public void makeBlocks(int blockCols, int blockRows) {
+
         blocks = blockMatrix(BLOCK_WIDTH, BLOCK_HEIGTH, blockCols, blockRows, PADDING, STAGE_WIDTH);
         chooseBlock(60);
         showBlocks();
@@ -102,32 +110,39 @@ public class Stage {
     public void start() {
 
         while (true) {
+
             try {
+
                 Thread.sleep(20);
                 player1.move();
                 player2.move();
+
                 if (ball == null) {
-                    //ball = Utils.startBall(CANVAS);
                    ball = Utils.startBall(CANVAS);
                 }
+
                 CollisionDetector.ballCollidesWithWalls(ball, CANVAS);
 
                 for (Block block : blocks) {
 
                     if (!block.isHit()) {
-                        CollisionDetector.ballCollidesWithBlocks(ball, block); /** Testing this now. */
+                        CollisionDetector.ballCollidesWithBlocks(ball, block);
                     }
                 }
 
                 CollisionDetector.ballCollidesWithPlayer(ball, player1);
                 CollisionDetector.ballCollidesWithPlayer(ball, player2);
+
                 for (Block block : blocks) {
+
                     if (!block.isHit()) {
                         block.draw();
                     }
                 }
+
                 ball.move();
                 ball.draw();
+
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
