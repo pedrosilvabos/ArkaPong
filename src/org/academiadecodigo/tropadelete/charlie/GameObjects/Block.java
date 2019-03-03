@@ -1,25 +1,34 @@
 package org.academiadecodigo.tropadelete.charlie.GameObjects;
 
 
+import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
+import org.academiadecodigo.simplegraphics.pictures.Picture;
+
 
 public class Block {
 
-    private int     x;
-    private int     y;
-    private int     width;
-    private int     heigth;
-    private boolean active;
+    private int       x;
+    private int       y;
+    private int       width;
+    private int       heigth;
+    private boolean   active;
+    private boolean   isHit;
     private Rectangle rectangle;
+    private Picture   picture;
 
-    public Block(int x, int y, int width, int heigth) {
-        this.x = x;
-        this.y = y;
+    public Block(int x, int y, int width, int heigth, Picture picture) {
+        this.x      = x;
+        this.y      = y;
         this.width  = width;
         this.heigth = heigth;
         this.active = false;
 
+        rectangle = new Rectangle();
+        rectangle.setColor(Color.BLUE);
+        rectangle.fill();
 
+        this.picture = picture;
     }
 
     public int getPositionX() {
@@ -46,17 +55,32 @@ public class Block {
         this.y = y;
     }
 
-    public void setActive() {
-        this.active = true;
-        //rectangle.delete();
+    public void setActive(boolean set) {
+        this.active = set;
     }
+
     public boolean isActive(){
         return active;
     }
 
-    public void respawn() {
-        this.active = true;
-        rectangle.fill();
+    public void setHit(){
+        this.isHit = true;
+        rectangle.delete();
     }
 
+    public Rectangle getRectangle() {
+        return this.rectangle;
+    }
+
+    public Picture getPicture() {
+        return this.picture;
+    }
+
+    public boolean isHit() {
+        return this.isHit;
+    }
+
+    public void draw() {
+        rectangle.fill();
+    }
 }
