@@ -1,6 +1,8 @@
 package org.academiadecodigo.tropadelete.charlie;
 
+import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
+import org.academiadecodigo.simplegraphics.graphics.Text;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 import org.academiadecodigo.tropadelete.charlie.GameObjects.Ball;
 import org.academiadecodigo.tropadelete.charlie.GameObjects.Block;
@@ -18,7 +20,7 @@ public class Stage {
 
     private final int PADDLE_WALL_OFFSET = 30;
     private final int PLAYER1_OFFSET = PADDING + PADDLE_WALL_OFFSET;
-    private final int PLAYER2_OFFSET = PADDING*2 + STAGE_WIDTH - PADDLE_WALL_OFFSET - BLOCK_WIDTH;
+    private final int PLAYER2_OFFSET = STAGE_WIDTH - PADDLE_WALL_OFFSET;
     private final Rectangle CANVAS = new Rectangle(PADDING, PADDING, STAGE_WIDTH, STAGE_HEIGHT);
 
     private final String RESOURCES ="resources/themes/";
@@ -26,7 +28,7 @@ public class Stage {
     private Block[] blocks;
     private Player player1;
     private Player player2;
-    private Ball ball;
+    private  static Ball ball;
 
     private String backgroundSkin;
     private String paddleLeftSkin;
@@ -34,6 +36,9 @@ public class Stage {
     private String ballSkin;
     private String blockSkin;
 
+    private final String pressStart = "Press Movement Key to start the ball!";
+    private Rectangle backgroundRect;
+    private Text initMessage;
     /**
      * Create and skin the stage
      * <p>
@@ -75,6 +80,12 @@ public class Stage {
             blocks[i] = new Block(((1280 / 2) - 300) + (i * 30), (768 / 2) + 20);
         }
         */
+        initMessage = new Text(PADDING + (STAGE_WIDTH / 2) - 60, PADDING + (STAGE_HEIGHT / 2) + 30, pressStart );
+        initMessage.grow(20, 20);
+        initMessage.setColor(Color.WHITE);
+
+        backgroundRect = new Rectangle(initMessage.getX() - 10, initMessage.getY() - 10, initMessage.getWidth() - 20, initMessage.getHeight() + 10);
+
     }
 
     /**
@@ -129,9 +140,29 @@ public class Stage {
                         block.draw();
                     }
                 }
+                if (ball != null) {
 
-                ball.move();
-                ball.draw();
+                    if (ball.isStatic()) {
+                        backgroundRect.fill();
+                        initMessage.draw();
+                    }
+
+                    if (!ball.isStatic()) {
+                        backgroundRect.delete();
+                        initMessage.delete();
+                        ball.move();
+                    }
+
+                    ball.draw();
+                }
+
+
+
+                if (Utils.checkVictoryCondition(ball, CANVAS, player1, player2)) {
+                    ball.delete();
+                    ball = null;
+                }
+
 
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -204,6 +235,9 @@ public class Stage {
                 picture.draw();
             }
         }
+    }
+    public  static Ball getBall() {
+        return ball;
     }
 }
 

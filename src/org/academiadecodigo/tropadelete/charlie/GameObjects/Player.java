@@ -3,8 +3,8 @@ package org.academiadecodigo.tropadelete.charlie.GameObjects;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 import org.academiadecodigo.tropadelete.charlie.Drawable;
-import org.academiadecodigo.tropadelete.charlie.PlayerNumber;
 import org.academiadecodigo.tropadelete.charlie.PlayerDirection;
+import org.academiadecodigo.tropadelete.charlie.PlayerNumber;
 
 public class Player implements Drawable {
 
@@ -20,6 +20,9 @@ public class Player implements Drawable {
     private int maxHeight;
     private int paddleHeight;
     private int playerOffset;
+
+    private final int INITIAL_POINTS = 3;
+    private int points;
 
     public Player(int offset, int posY, int stageHeight, PlayerNumber pn, String picture) {
 
@@ -48,6 +51,7 @@ public class Player implements Drawable {
 
         return paddle;
     }
+
     public PlayerNumber getPlayerNumber() {
         return playerNumber;
     }
@@ -80,9 +84,11 @@ public class Player implements Drawable {
         }
         setPlayerDirection(null);
     }
+
     public Rectangle getRectangle() {
         return paddle;
     }
+
     public void draw() {
         paddle.draw();
     }
@@ -91,5 +97,12 @@ public class Player implements Drawable {
         this.playerDirection = playerDirection;
     }
 
+    public void losePoint() {
+        --points;
+    }
+
+    public int getPoints() {
+        return points;
+    }
 
 }

@@ -2,7 +2,7 @@ package org.academiadecodigo.tropadelete.charlie;
 
 public enum PlayerNumber {
     ONE,
-    TWO;
-
+    TWO,
+    NONE;
     PlayerNumber() {}
 }

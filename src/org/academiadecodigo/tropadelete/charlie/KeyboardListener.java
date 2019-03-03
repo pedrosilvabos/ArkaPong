@@ -4,6 +4,7 @@ import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
+import org.academiadecodigo.tropadelete.charlie.GameObjects.Ball;
 import org.academiadecodigo.tropadelete.charlie.GameObjects.Direction;
 import org.academiadecodigo.tropadelete.charlie.GameObjects.Player;
 
@@ -40,6 +41,17 @@ public class KeyboardListener implements KeyboardHandler {
     @Override
     public void keyPressed(KeyboardEvent key) {
 
+        if (Stage.getBall() != null && Stage.getBall().isStatic()) {
+
+            if (Stage.getBall().getStartingPlayer().equals(PlayerNumber.ONE)) {
+                checkPlayerOne(Stage.getBall(), key);
+            }
+
+            if (Stage.getBall().getStartingPlayer().equals(PlayerNumber.TWO)) {
+                checkPlayerTwo(Stage.getBall(), key);
+            }
+        }
+
         switch (key.getKey()) {
             case KeyboardEvent.KEY_UP:
                 player2.setPlayerDirection(PlayerDirection.UP);
@@ -68,6 +80,20 @@ public class KeyboardListener implements KeyboardHandler {
 
         if (key.getKey() == KeyboardEvent.KEY_A || key.getKey() == KeyboardEvent.KEY_Z) {
             player2.setPlayerDirection(null);
+        }
+    }
+
+    private static void checkPlayerOne(Ball ball, KeyboardEvent key) {
+
+        if (key.getKey() == KeyboardEvent.KEY_A || key.getKey() == KeyboardEvent.KEY_Z) {
+            ball.removeStatic();
+        }
+    }
+
+    private static void checkPlayerTwo(Ball ball, KeyboardEvent key) {
+
+        if (key.getKey() == KeyboardEvent.KEY_UP || key.getKey() == KeyboardEvent.KEY_DOWN) {
+            ball.removeStatic();
         }
     }
 
