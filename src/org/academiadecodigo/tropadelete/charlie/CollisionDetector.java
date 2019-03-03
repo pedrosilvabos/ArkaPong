@@ -72,7 +72,7 @@ public class CollisionDetector {
         }
     }
 
-    public static void ballCollidesWithBlocks(Ball ball, Block block) {
+    public static boolean ballCollidesWithBlocks(Ball ball, Block block) {
 
         Shape ballS = ball.getEllipse();
 
@@ -82,23 +82,17 @@ public class CollisionDetector {
             /** Check upperRight point of Ball */
             if (pointWithinBlock(block.getRectangle(), ballS.getX() + ballS.getWidth(), ballS.getY())) {
                 ball.setDeltaByBounce(Direction.DOWN);
-                System.out.println("Block collision DOWN");
-                block.setHit();
-                return;
+                return true;
             }
 
             /** Check lowerLeft point of Ball */
             if (pointWithinBlock(block.getRectangle(), ballS.getX(), ballS.getY() + ballS.getHeight())) {
                 ball.setDeltaByBounce(Direction.RIGHT);
-                System.out.println("Block collision RIGHT");
-                block.setHit();
-                return;
+                return true;
             }
 
             ball.setDeltaByBounce(Direction.LOWER_RIGHT);
-            System.out.println("Block collision LOWER_RIGHT");
-            block.setHit();
-            return;
+            return true;
         }
 
         /** Check upperRight point of Ball */
@@ -107,15 +101,11 @@ public class CollisionDetector {
             /** Check lowerRight point of Ball */
             if (pointWithinBlock(block.getRectangle(), ballS.getX() + ballS.getWidth(), ballS.getY() + ballS.getHeight())) {
                 ball.setDeltaByBounce(Direction.LEFT);
-                System.out.println("Block collision LEFT");
-                block.setHit();
-                return;
+                return true;
             }
 
             ball.setDeltaByBounce(Direction.LOWER_LEFT);
-            System.out.println("Block collision LOWER_LEFT");
-            block.setHit();
-            return;
+            return true;
         }
 
         /** Check lowerLeft point of Ball */
@@ -124,38 +114,38 @@ public class CollisionDetector {
             /** Check lowerRight point of Ball */
             if (pointWithinBlock(block.getRectangle(), ballS.getX() + ballS.getWidth(), ballS.getY() + ballS.getHeight())) {
                 ball.setDeltaByBounce(Direction.UP);
-                System.out.println("Block collision UP ");
-                block.setHit();
-                return;
+                return true;
             }
 
             ball.setDeltaByBounce(Direction.UPPER_RIGHT);
-            System.out.println("Block collision UPPER_RIGHT");
-            block.setHit();
-            return;
+            return true;
         }
 
         /** Check lowerRight point of Ball */
         if (pointWithinBlock(block.getRectangle(), ballS.getX() + ballS.getWidth(), ballS.getY() + ballS.getHeight())) {
             ball.setDeltaByBounce(Direction.UPPER_LEFT);
-            System.out.println("Block collision UPPER_LEFT");
-            block.setHit();
+            return true;
         }
+
+        return false;
     }
 
     public static boolean pointWithinBlock(Rectangle block, int x, int y) {
         return ( (x <= block.getX() + block.getWidth() && x >= block.getX()) &&
                  (y <= block.getY() + block.getHeight() && y >= block.getY()) );
     }
+
+
     public static PlayerNumber ballCollisionGoal(Ellipse ball, Rectangle stage) {
 
         PlayerNumber pn = PlayerNumber.NONE;
+        int spacing = 10;
 
-        if (ball.getX() <= stage.getX()) {
+        if (ball.getX() <= stage.getX() + spacing) {
             pn = PlayerNumber.ONE;
         }
 
-        if (ball.getX() + ball.getWidth() >= stage.getX() + stage.getWidth()) {
+        if (ball.getX() + ball.getWidth() >= stage.getX() + stage.getWidth() - spacing) {
             pn = PlayerNumber.TWO;
         }
 

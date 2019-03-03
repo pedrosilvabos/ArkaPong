@@ -21,7 +21,7 @@ public class Player implements Drawable {
     private int paddleHeight;
     private int playerOffset;
 
-    private final int INITIAL_POINTS = 3;
+    private final int INITIAL_POINTS = 1;
     private int points;
 
     public Player(int offset, int posY, int stageHeight, PlayerNumber pn, String picture) {
@@ -36,6 +36,8 @@ public class Player implements Drawable {
         this.paddle = generatePaddle();
         this.paddleSkin = skinPaddle(picture);
         this.playerNumber = pn;
+
+        points = INITIAL_POINTS;
     }
 
     public Rectangle generatePaddle() {
@@ -103,6 +105,10 @@ public class Player implements Drawable {
 
     public int getPoints() {
         return points;
+    }
+
+    public boolean isLoser() {
+        return points == 0;
     }
 
 }
