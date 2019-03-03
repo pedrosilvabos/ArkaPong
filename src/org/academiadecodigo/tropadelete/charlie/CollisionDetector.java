@@ -147,5 +147,18 @@ public class CollisionDetector {
         return ( (x <= block.getX() + block.getWidth() && x >= block.getX()) &&
                  (y <= block.getY() + block.getHeight() && y >= block.getY()) );
     }
+    public static PlayerNumber ballCollisionGoal(Ellipse ball, Rectangle stage) {
 
+        PlayerNumber pn = PlayerNumber.NONE;
+
+        if (ball.getX() <= stage.getX()) {
+            pn = PlayerNumber.ONE;
+        }
+
+        if (ball.getX() + ball.getWidth() >= stage.getX() + stage.getWidth()) {
+            pn = PlayerNumber.TWO;
+        }
+
+        return pn;
+    }
 }
