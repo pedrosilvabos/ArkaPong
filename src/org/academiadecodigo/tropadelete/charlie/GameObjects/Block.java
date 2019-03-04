@@ -8,13 +8,14 @@ import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class Block {
 
-    private int     x;
-    private int     y;
-    private int     width;
-    private int     heigth;
-    private boolean active;
-    private boolean isHit;
+    private int       x;
+    private int       y;
+    private int       width;
+    private int       heigth;
+    private boolean   active;
+    private boolean   isHit;
     private Rectangle rectangle;
+    private Picture   picture;
 
     public Block(int x, int y, int width, int heigth, Picture picture) {
         this.x = x;
@@ -25,10 +26,17 @@ public class Block {
         rectangle = new Rectangle();
         rectangle.setColor(Color.BLUE);
         rectangle.fill();
-
+        this.picture = picture;
 
     }
-
+    /** For testing purposes. */
+    public Block(int x, int y) {
+        this.x = x;
+        this.y = y;
+        rectangle = new Rectangle(x, y, 60, 60);
+        rectangle.setColor(Color.BLUE);
+        rectangle.fill();
+    }
     public int getPositionX() {
         return x;
     }
@@ -53,9 +61,8 @@ public class Block {
         this.y = y;
     }
 
-    public void setActive() {
-        this.active = true;
-        //rectangle.delete();
+    public void setActive(boolean set) {
+        this.active = set;
     }
     public boolean isActive(){
         return active;
@@ -65,24 +72,16 @@ public class Block {
         this.active = true;
         rectangle.fill();
     }
-    /** For testing purposes. */
-    public Block(int x, int y) {
-        this.x = x;
-        this.y = y;
-        rectangle = new Rectangle(x, y, 60, 60);
-        rectangle.setColor(Color.BLUE);
-        rectangle.fill();
-    }
-    public void setHit(){
-        this.isHit = true;
-        rectangle.delete();
-    }
+
     public Rectangle getRectangle() {
-        return rectangle;
+        return this.rectangle;
     }
 
+    public Picture getPicture() {
+        return this.picture;
+    }
     public boolean isHit() {
-        return isHit;
+        return this.isHit;
     }
 
     public void draw() {

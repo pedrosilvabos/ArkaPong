@@ -36,6 +36,8 @@ public class Player implements Drawable {
         this.paddle = generatePaddle();
         this.paddleSkin = skinPaddle(picture);
         this.playerNumber = pn;
+
+        points = INITIAL_POINTS;
     }
 
     public Rectangle generatePaddle() {
@@ -105,4 +107,7 @@ public class Player implements Drawable {
         return points;
     }
 
+    public boolean isLoser() {
+        return points == 0;
+    }
 }

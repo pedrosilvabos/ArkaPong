@@ -9,12 +9,6 @@ import java.util.Random;
 public class Utils {
 
 
-    /**
-     * initializes a new Ball in the center of the Stage
-     * and throws it to a random direction of left and right
-     *
-     * @return the ball centered in Stage and with correct delta values
-     */
     public static Ball startBall(Player player1, Player player2) {
 
         int ballPaddleDistance = 50;
@@ -49,21 +43,21 @@ public class Utils {
         return ball;
     }
 
-    public static boolean checkVictoryCondition(Ball ball, Rectangle canvas, Player player1, Player player2) {
+    public static PlayerNumber checkVictoryCondition(Ball ball, Rectangle canvas, Player player1, Player player2) {
 
         PlayerNumber playerNumber = CollisionDetector.ballCollisionGoal(ball.getEllipse(), canvas);
 
         if (playerNumber.equals(PlayerNumber.ONE)) {
             player1.losePoint();
-            return true;
+            return PlayerNumber.TWO;
         }
 
         if (playerNumber.equals(PlayerNumber.TWO)) {
             player2.losePoint();
-            return true;
+            return PlayerNumber.ONE;
         }
 
-        return false;
+        return PlayerNumber.NONE;
     }
 
 }
