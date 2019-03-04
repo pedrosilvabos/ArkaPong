@@ -54,10 +54,10 @@ public class Stage {
         int theme  = (int) (Math.random() * 3);
         int option = (int) (Math.random() * 3);
         System.out.println(theme);
-        this.sound = new Sound(RESOURCES+theme+"/sounds/music.wav");
-        sound.setLoop(1);
+        //this.sound = new Sound(RESOURCES+theme+"/sounds/music.wav");
+//        sound.setLoop(1);
 
-       sound.play(true);
+       //sound.play(true);
         // só para testes
         if (theme == 2) {option = 0;}
 
@@ -141,8 +141,14 @@ public class Stage {
                 /** PLAYERS */
 
                 screenWriter.drawPlayerScores();
-                player1.move();
-                player2.move();
+
+                if (player1.isMoving()) {
+                    player1.move();
+                }
+
+                if(player2.isMoving()) {
+                    player2.move();
+                }
 
                 /** BALL */
 

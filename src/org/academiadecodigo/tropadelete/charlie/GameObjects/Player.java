@@ -8,6 +8,7 @@ import org.academiadecodigo.tropadelete.charlie.PlayerNumber;
 
 public class Player implements Drawable {
 
+    private boolean moving = false;
     private int posY;
     private int step;
     private PlayerDirection playerDirection;
@@ -50,7 +51,7 @@ public class Player implements Drawable {
     public Picture skinPaddle(String picture) {
         //make pictures names number and random them
         Picture paddle = new Picture(this.playerOffset, posY, picture);
-
+        paddle.draw();
         return paddle;
     }
 
@@ -84,7 +85,6 @@ public class Player implements Drawable {
                 this.paddleSkin.draw();
             }
         }
-        setPlayerDirection(null);
     }
 
     public Rectangle getRectangle() {
@@ -109,5 +109,13 @@ public class Player implements Drawable {
 
     public boolean isLoser() {
         return points == 0;
+    }
+
+    public void setMoving(boolean moving) {
+        this.moving = moving;
+    }
+
+    public boolean isMoving() {
+        return moving;
     }
 }
