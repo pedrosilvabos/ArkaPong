@@ -21,12 +21,12 @@ public class Player implements Drawable {
     private int paddleHeight;
     private int playerOffset;
 
-    private final int INITIAL_POINTS = 3;
+    private final int INITIAL_POINTS = 5;
     private int points;
 
     public Player(int offset, int posY, int stageHeight, PlayerNumber pn, String picture) {
 
-        this.step = 12; //paddle jumps
+        this.step = 35; //paddle jumps
         this.playerOffset = offset;
         this.minHeight = stageHeight;
         this.hasLost = false;
@@ -60,7 +60,6 @@ public class Player implements Drawable {
 
     public void move() {
 
-        //use switch!!!
         if (this.playerDirection == PlayerDirection.UP) {
             this.posY -= step;
             if (posY < 13) {              //CHECK THIS SHIT AND PUT IN PROPERTIES

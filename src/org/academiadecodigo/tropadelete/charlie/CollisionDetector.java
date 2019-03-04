@@ -26,20 +26,36 @@ public class CollisionDetector {
         if (player.getPlayerNumber() == PlayerNumber.ONE) {
 
             if (p1CheckX(eBall, rPlayer) && checkY(eBall, rPlayer)) {
-                System.out.println("BallY: " + eBall.getY() + " PadY: " + rPlayer.getY());
-                ball.setDeltaByBouncePlayer();
-                touchCount++;
+
+                if (!ball.isColliding()) {
+
+                    ball.setDeltaByBouncePlayer();
+                    ball.setColliding(true);
+                    return ++touchCount;
+                }
+
+                return touchCount;
             }
+
+            ball.setColliding(false);
 
         }
 
         if (player.getPlayerNumber() == PlayerNumber.TWO) {
 
             if (p2CheckX(eBall, rPlayer) && checkY(eBall, rPlayer)) {
-                System.out.println("BallY: " + eBall.getY() + " PadY: " + rPlayer.getY());
-                ball.setDeltaByBouncePlayer();
-                touchCount++;
+
+                if (!ball.isColliding()) {
+
+                    ball.setDeltaByBouncePlayer();
+                    ball.setColliding(true);
+                    return ++touchCount;
+                }
+
+                return touchCount;
             }
+
+            ball.setColliding(false);
         }
         return touchCount;
     }
@@ -158,7 +174,7 @@ public class CollisionDetector {
     public static PlayerNumber ballCollisionGoal(Ellipse ball, Rectangle stage) {
 
         PlayerNumber pn = PlayerNumber.NONE;
-        int spacing = 10;
+        int spacing = 20;
 
         if (ball.getX() <= stage.getX() + spacing) {
             pn = PlayerNumber.ONE;

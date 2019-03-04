@@ -21,9 +21,12 @@ public class Stage {
     private final int PLAYER2_OFFSET = STAGE_WIDTH - PADDLE_WALL_OFFSET - 25;
     private final Rectangle CANVAS = new Rectangle(PADDING, PADDING, STAGE_WIDTH, STAGE_HEIGHT);
 
-    private       int ballSpeed      = 10; // initial ball speed
-    private final int touchIncrement =  5; // # of touches in the paddle before increment of ball speed (0 = no increment)
-    private final int increment      =  1; // increment to the ball speed
+    private final int touchIncrement =  5;
+    private final int blockIncrement =  1;
+    private final int initialSleep   = 25;
+    private       int sleep          = initialSleep;
+    private       int sleepDecrement = -2;
+    private       int numBlocks      =  5;
 
     private final String RESOURCES ="resources/themes/";
 
@@ -76,6 +79,8 @@ public class Stage {
         player2 = new Player(PLAYER2_OFFSET, PADDING, STAGE_HEIGHT, PlayerNumber.TWO,paddleRightSkin); //RIGHT
         new KeyboardListener(player1, player2);
         makeBlocks(15, 8);
+        chooseBlocks(10);
+        showBlocks();
 
         roundWinner = PlayerNumber.NONE;
         winner = PlayerNumber.NONE;
@@ -95,8 +100,7 @@ public class Stage {
     public void makeBlocks(int blockCols, int blockRows) {
 
         blocks = blockMatrix(BLOCK_WIDTH, BLOCK_HEIGTH, blockCols, blockRows, PADDING, STAGE_WIDTH);
-        chooseBlocks(3);
-        showBlocks();
+
     }
 
     /**
@@ -120,7 +124,7 @@ public class Stage {
 
 
             try {
-                Thread.sleep(20);
+                Thread.sleep(sleep);
 
                 /** PLAYERS */
 
@@ -132,6 +136,7 @@ public class Stage {
 
                 if (ball == null) {
                     ball = Utils.startBall(player1, player2);
+                    sleep = initialSleep;
                 }
 
                 if (ball != null) {
@@ -160,7 +165,6 @@ public class Stage {
                     }
 
                     if (collision) {
-                        showBlock(chooseBlock());
                         break;
                     }
                 }
@@ -170,22 +174,16 @@ public class Stage {
 
                 if (touchCount >= touchIncrement) {
                     touchCount = 0;
-                    ballSpeed+=increment;
-                    //ball.setSpeed(ballSpeed);
+                    this.numBlocks+=blockIncrement;
+                    chooseBlocks(numBlocks);
+                    showBlocks();
+                    sleep += sleepDecrement;
+                    if (sleep < 1) {sleep = 1;}
                 }
 
 
                 // check ball collision with goals
                 roundWinner = Utils.checkVictoryCondition(ball, CANVAS, player1, player2);
-
-                /** BLOCKS */
-
-                for (Block block : blocks) {
-
-                    if (block.isActive()) {
-                        block.draw();
-                    }
-                }
 
                 /** CHECKING WINNER */
 
@@ -276,6 +274,7 @@ public class Stage {
      * @param numBlock the number of active blocks at that time
      */
     public void chooseBlocks(int numBlock) {
+        hideBlocks();
         int i = 0;
 
         if (numBlock <0) { // minimum number of blocks to activate
