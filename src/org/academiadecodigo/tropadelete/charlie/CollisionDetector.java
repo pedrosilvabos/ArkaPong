@@ -18,7 +18,7 @@ public class CollisionDetector {
      * @param player the Player, to be able to reference its measurements
      * @return true if there is a collision between the two; false otherwise
      */
-    public static void ballCollidesWithPlayer(Ball ball, Player player) {
+    public static int ballCollidesWithPlayer(Ball ball, Player player,int touchCount) {
 
         Ellipse eBall = ball.getEllipse();
         Rectangle rPlayer = player.getRectangle();
@@ -28,8 +28,9 @@ public class CollisionDetector {
             if (p1CheckX(eBall, rPlayer) && checkY(eBall, rPlayer)) {
                 System.out.println("BallY: " + eBall.getY() + " PadY: " + rPlayer.getY());
                 ball.setDeltaByBouncePlayer();
+                touchCount++;
             }
-            return;
+
         }
 
         if (player.getPlayerNumber() == PlayerNumber.TWO) {
@@ -37,8 +38,10 @@ public class CollisionDetector {
             if (p2CheckX(eBall, rPlayer) && checkY(eBall, rPlayer)) {
                 System.out.println("BallY: " + eBall.getY() + " PadY: " + rPlayer.getY());
                 ball.setDeltaByBouncePlayer();
+                touchCount++;
             }
         }
+        return touchCount;
     }
 
 
@@ -132,7 +135,7 @@ public class CollisionDetector {
 
     public static boolean pointWithinBlock(Rectangle block, int x, int y) {
         return ( (x <= block.getX() + block.getWidth() && x >= block.getX()) &&
-                 (y <= block.getY() + block.getHeight() && y >= block.getY()) );
+                (y <= block.getY() + block.getHeight() && y >= block.getY()) );
     }
 
 

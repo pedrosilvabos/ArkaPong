@@ -1,34 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b6f59402-2c6f-48e3-a3fd-50ce23d435c8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/ScreenWriter.java" afterDir="false" />
+    <list default="true" id="18953bd5-9544-4226-a77c-dbde14b7cd51" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/out/production/master/META-INF/master.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/0/images copy/background0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/0/images copy/background1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/0/images copy/background2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/0/images copy/ball0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/0/images copy/ball1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/0/images copy/ball2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/0/images copy/block0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/0/images copy/block1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/0/images copy/block2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/0/images copy/paddleLeft0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/0/images copy/paddleLeft1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/0/images copy/paddleLeft2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/0/images copy/paddleRight0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/0/images copy/paddleRight1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/0/images copy/paddleRight2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/0/sounds/blockHide.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/0/sounds/blockShow.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/0/sounds/music.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/0/sounds/paddleHit.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/0/sounds/victory.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/1/images copy/background0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/1/images copy/background1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/1/images copy/background2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/1/images copy/ball0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/1/images copy/ball1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/1/images copy/ball2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/1/images copy/block0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/1/images copy/block1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/1/images copy/block2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/1/images copy/paddleLeft0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/1/images copy/paddleLeft1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/1/images copy/paddleLeft2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/1/images copy/paddleRight0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/1/images copy/paddleRight1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/1/images copy/paddleRight2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/1/images/ball0.png~38a7d10a11939308a2b6a01669b6abfa90085082" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/1/images/ball0.png~HEAD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/1/images/block0.png~38a7d10a11939308a2b6a01669b6abfa90085082" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/1/images/block0.png~HEAD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/1/sounds/blockHide.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/1/sounds/blockShow.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/1/sounds/music.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/1/sounds/paddleHit.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/1/sounds/victory.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/2/images copy/background0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/2/images copy/background1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/2/images copy/background2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/2/images copy/ball0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/2/images copy/block0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/2/images copy/paddleLeft0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/2/images copy/paddleRight0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/2/images/ball1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/2/images/ball2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/2/images/block1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/2/images/block2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/2/images/paddleLeft1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/2/images/paddleLeft2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/2/images/paddleRight1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/2/images/paddleRight2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/2/sounds/Z_fire_.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/2/sounds/blockHide.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/2/sounds/blockShow.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/2/sounds/music.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/2/sounds/paddleHit.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/themes/2/sounds/victory.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/CollisionDetector.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/Drawable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/GameObjects/Ball$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/GameObjects/Ball.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/GameObjects/Block.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/GameObjects/Direction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/GameObjects/Player.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/KeyboardListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/PlayerDirection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/PlayerNumber.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/Stage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/Utils.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/master/org/academiadecodigo/tropadelete/charlie/CollisionDetector.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/master/org/academiadecodigo/tropadelete/charlie/CollisionDetector.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/master/org/academiadecodigo/tropadelete/charlie/GameObjects/Block.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/master/org/academiadecodigo/tropadelete/charlie/GameObjects/Block.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/master/org/academiadecodigo/tropadelete/charlie/GameObjects/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/master/org/academiadecodigo/tropadelete/charlie/GameObjects/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/master/org/academiadecodigo/tropadelete/charlie/PlayerNumber.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/master/org/academiadecodigo/tropadelete/charlie/PlayerNumber.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/master/org/academiadecodigo/tropadelete/charlie/Stage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/master/org/academiadecodigo/tropadelete/charlie/Stage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/master/org/academiadecodigo/tropadelete/charlie/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/master/org/academiadecodigo/tropadelete/charlie/Utils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/themes/0/description.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/0/description.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/themes/0/images/background0.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/0/images/background0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/themes/0/images/block0.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/0/images/block0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/themes/0/images/paddleLeft0.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/0/images/paddleLeft0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/themes/0/images/paddleRight0.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/0/images/paddleRight0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/themes/1/description.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/1/description.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/themes/1/images/background0.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/1/images/background0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/themes/1/images/background1.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/1/images/background1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/themes/1/images/background2.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/1/images/background2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/themes/1/images/ball1.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/1/images/ball1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/themes/1/images/ball2.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/1/images/ball2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/themes/1/images/block1.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/1/images/block1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/themes/1/images/block2.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/1/images/block2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/themes/1/images/paddleLeft0.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/1/images/paddleLeft0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/themes/1/images/paddleLeft1.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/1/images/paddleLeft1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/themes/1/images/paddleLeft2.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/1/images/paddleLeft2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/themes/1/images/paddleRight0.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/1/images/paddleRight0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/themes/1/images/paddleRight1.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/1/images/paddleRight1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/themes/1/images/paddleRight2.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/1/images/paddleRight2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/themes/2/description.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/2/description.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/themes/2/images/background0.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/2/images/background0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/themes/2/images/background1.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/2/images/background1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/themes/2/images/background2.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/2/images/background2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/themes/2/images/ball0.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/2/images/ball0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/themes/2/images/block0.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/2/images/block0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/themes/2/images/paddleLeft0.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/2/images/paddleLeft0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/themes/2/images/paddleRight0.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/2/images/paddleRight0.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/CollisionDetector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/CollisionDetector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/GameObjects/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/GameObjects/Block.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/GameObjects/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/GameObjects/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/PlayerNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/PlayerNumber.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/Stage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/Stage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/Utils.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,89 +115,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/Stage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="169" column="30" selection-start-line="169" selection-start-column="30" selection-end-line="169" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/CollisionDetector.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1048">
-              <caret line="126" column="24" selection-start-line="126" selection-start-column="24" selection-end-line="126" selection-end-column="24" />
-              <folding>
-                <element signature="method#ballCollidesWithPlayer#0;class#CollisionDetector#0" />
-                <element signature="method#p1CheckX#0;class#CollisionDetector#0" />
-                <element signature="method#p2CheckX#0;class#CollisionDetector#0" />
-                <element signature="method#checkY#0;class#CollisionDetector#0" />
-                <element signature="method#ballCollidesWithWalls#0;class#CollisionDetector#0" />
-                <element signature="method#pointWithinBlock#0;class#CollisionDetector#0" />
-                <element signature="method#ballCollisionGoal#0;class#CollisionDetector#0" />
-              </folding>
+            <state relative-caret-position="-2398">
+              <caret line="129" selection-start-line="129" selection-end-line="129" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/ScreenWriter.java">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/GameObjects/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="688">
-              <caret line="97" column="31" selection-start-line="97" selection-start-column="31" selection-end-line="97" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/simplegraphics.jar!/org/academiadecodigo/simplegraphics/pictures/Picture.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/GameObjects/Ball.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3600">
-              <caret line="261" column="47" selection-start-line="261" selection-start-column="47" selection-end-line="261" selection-end-column="47" />
-              <folding>
-                <element signature="e#5323#5324#0" expanded="true" />
-                <element signature="e#5355#5356#0" expanded="true" />
-                <element signature="e#5475#5476#0" expanded="true" />
-                <element signature="e#5507#5508#0" expanded="true" />
-                <element signature="e#5558#5559#0" expanded="true" />
-                <element signature="e#5600#5601#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/simplegraphics.jar!/org/academiadecodigo/simplegraphics/graphics/Text.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/openjdk-11.0.1.jdk/Contents/Home/lib/src.zip!/java.desktop/javax/swing/JLabel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3885">
-              <caret line="314" column="16" selection-start-line="314" selection-start-column="16" selection-end-line="314" selection-end-column="16" />
+            <state relative-caret-position="208">
+              <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
             </state>
           </provider>
         </entry>
@@ -128,51 +137,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/GameObjects/Block.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="718">
-              <caret line="79" column="5" lean-forward="true" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
+            <state relative-caret-position="54">
+              <caret line="86" selection-start-line="86" selection-end-line="86" />
               <folding>
-                <element signature="e#1033#1034#0" expanded="true" />
-                <element signature="e#1057#1058#0" expanded="true" />
-                <element signature="e#1090#1091#0" expanded="true" />
-                <element signature="e#1114#1115#0" expanded="true" />
-                <element signature="e#1143#1144#0" expanded="true" />
-                <element signature="e#1176#1177#0" expanded="true" />
-                <element signature="e#1206#1207#0" expanded="true" />
-                <element signature="e#1240#1241#0" expanded="true" />
-                <element signature="e#1279#1280#0" expanded="true" />
-                <element signature="e#1305#1306#0" expanded="true" />
-                <element signature="e#1344#1345#0" expanded="true" />
-                <element signature="e#1370#1371#0" expanded="true" />
-                <element signature="e#1401#1402#0" expanded="true" />
-                <element signature="e#1435#1436#0" expanded="true" />
-                <element signature="e#1466#1467#0" expanded="true" />
-                <element signature="e#1495#1496#0" expanded="true" />
-                <element signature="e#1710#1711#0" expanded="true" />
-                <element signature="e#1742#1743#0" expanded="true" />
-                <element signature="e#1826#1827#0" expanded="true" />
-                <element signature="e#1858#1859#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/Utils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/GameObjects/Player.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-              <folding>
-                <element signature="e#3039#3040#0" expanded="true" />
-                <element signature="e#3063#3064#0" expanded="true" />
+                <element signature="e#1568#1569#0" expanded="true" />
+                <element signature="e#1597#1598#0" expanded="true" />
+                <element signature="e#1748#1749#0" expanded="true" />
+                <element signature="e#1819#1820#0" expanded="true" />
+                <element signature="e#1881#1882#0" expanded="true" />
+                <element signature="e#1939#1940#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -180,42 +153,31 @@
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/KeyboardListener.java" />
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/GameObjects/Ball.java" />
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/PlayerNumber.java" />
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/ScreenWritter.java" />
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/Utils.java" />
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/GameObjects/Player.java" />
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/ScreenWriter.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/GameObjects/Block.java" />
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/CollisionDetector.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/Stage.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/GameObjects/Player.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1920" />
-    <option name="height" value="977" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -245,14 +207,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551640315696" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551665718034" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -266,285 +224,78 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.academiadecodigo.tropadelete.charlie.Main" />
-      <module name="master" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.academiadecodigo.tropadelete.charlie.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b6f59402-2c6f-48e3-a3fd-50ce23d435c8" name="Default Changelist" comment="" />
-      <created>1551575108815</created>
+      <changelist id="18953bd5-9544-4226-a77c-dbde14b7cd51" name="Default Changelist" comment="" />
+      <created>1551665232309</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1551575108815</updated>
-      <workItem from="1551627966865" duration="10363000" />
-      <workItem from="1551640389287" duration="466000" />
-      <workItem from="1551640893491" duration="912000" />
-      <workItem from="1551641853083" duration="2013000" />
+      <updated>1551665232309</updated>
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13754000" />
-  </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="977" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26464325" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" visible="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32881355" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32881355" />
-      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Database" order="8" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Image Layers" order="0" />
-      <window_info id="Designer" order="1" />
-      <window_info id="UI Designer" order="2" />
-      <window_info id="Capture Tool" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.24659607" />
-      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="1" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="3" weight="0.3289689" />
-      <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.3289689" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="right" id="Palette" order="0" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Theme Preview" order="2" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
-    </layout-to-restore>
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/GameObjects/Direction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/Drawable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/KeyboardListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-713">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/PlayerDirection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/PlayerNumber.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/openjdk-11.0.1.jdk/Contents/Home/lib/src.zip!/java.desktop/javax/swing/JComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8209">
-          <caret line="906" selection-start-line="906" selection-end-line="906" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/simplegraphics.jar!/org/academiadecodigo/simplegraphics/pictures/Picture.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/GameObjects/Ball.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3600">
-          <caret line="261" column="47" selection-start-line="261" selection-start-column="47" selection-end-line="261" selection-end-column="47" />
-          <folding>
-            <element signature="e#5323#5324#0" expanded="true" />
-            <element signature="e#5355#5356#0" expanded="true" />
-            <element signature="e#5475#5476#0" expanded="true" />
-            <element signature="e#5507#5508#0" expanded="true" />
-            <element signature="e#5558#5559#0" expanded="true" />
-            <element signature="e#5600#5601#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/simplegraphics.jar!/org/academiadecodigo/simplegraphics/graphics/Text.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/openjdk-11.0.1.jdk/Contents/Home/lib/src.zip!/java.desktop/javax/swing/JLabel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3885">
-          <caret line="314" column="16" selection-start-line="314" selection-start-column="16" selection-end-line="314" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/GameObjects/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-          <folding>
-            <element signature="e#3039#3040#0" expanded="true" />
-            <element signature="e#3063#3064#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/simplegraphics.jar!/org/academiadecodigo/simplegraphics/graphics/Canvas.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/GameObjects/Block.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="718">
-          <caret line="79" column="5" lean-forward="true" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
+        <state relative-caret-position="54">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
           <folding>
-            <element signature="e#1033#1034#0" expanded="true" />
-            <element signature="e#1057#1058#0" expanded="true" />
-            <element signature="e#1090#1091#0" expanded="true" />
-            <element signature="e#1114#1115#0" expanded="true" />
-            <element signature="e#1143#1144#0" expanded="true" />
-            <element signature="e#1176#1177#0" expanded="true" />
-            <element signature="e#1206#1207#0" expanded="true" />
-            <element signature="e#1240#1241#0" expanded="true" />
-            <element signature="e#1279#1280#0" expanded="true" />
-            <element signature="e#1305#1306#0" expanded="true" />
-            <element signature="e#1344#1345#0" expanded="true" />
-            <element signature="e#1370#1371#0" expanded="true" />
-            <element signature="e#1401#1402#0" expanded="true" />
-            <element signature="e#1435#1436#0" expanded="true" />
-            <element signature="e#1466#1467#0" expanded="true" />
-            <element signature="e#1495#1496#0" expanded="true" />
-            <element signature="e#1710#1711#0" expanded="true" />
-            <element signature="e#1742#1743#0" expanded="true" />
-            <element signature="e#1826#1827#0" expanded="true" />
-            <element signature="e#1858#1859#0" expanded="true" />
+            <element signature="e#1568#1569#0" expanded="true" />
+            <element signature="e#1597#1598#0" expanded="true" />
+            <element signature="e#1748#1749#0" expanded="true" />
+            <element signature="e#1819#1820#0" expanded="true" />
+            <element signature="e#1881#1882#0" expanded="true" />
+            <element signature="e#1939#1940#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/Stage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="169" column="30" selection-start-line="169" selection-start-column="30" selection-end-line="169" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-2398">
+          <caret line="129" selection-start-line="129" selection-end-line="129" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/CollisionDetector.java">
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/GameObjects/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1048">
-          <caret line="126" column="24" selection-start-line="126" selection-start-column="24" selection-end-line="126" selection-end-column="24" />
-          <folding>
-            <element signature="method#ballCollidesWithPlayer#0;class#CollisionDetector#0" />
-            <element signature="method#p1CheckX#0;class#CollisionDetector#0" />
-            <element signature="method#p2CheckX#0;class#CollisionDetector#0" />
-            <element signature="method#checkY#0;class#CollisionDetector#0" />
-            <element signature="method#ballCollidesWithWalls#0;class#CollisionDetector#0" />
-            <element signature="method#pointWithinBlock#0;class#CollisionDetector#0" />
-            <element signature="method#ballCollisionGoal#0;class#CollisionDetector#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/ScreenWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="97" column="31" selection-start-line="97" selection-start-column="31" selection-end-line="97" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="208">
+          <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
         </state>
       </provider>
     </entry>

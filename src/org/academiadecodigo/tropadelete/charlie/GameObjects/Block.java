@@ -8,12 +8,16 @@ import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class Block {
 
-    private int     x;
-    private int     y;
-    private int     width;
-    private int     heigth;
-    private boolean active;
+
+    private int       x;
+    private int       y;
+    private int       width;
+    private int       heigth;
+    private boolean   active;
+    private boolean   isHit;
+
     private Rectangle rectangle;
+    private Picture   picture;
 
     public Block(int x, int y, int width, int heigth, Picture picture) {
         this.x = x;
@@ -24,9 +28,10 @@ public class Block {
         rectangle = new Rectangle();
         rectangle.setColor(Color.BLUE);
         rectangle.fill();
-
+        this.picture = picture;
 
     }
+
 
     /** For testing purposes. */
     public Block(int x, int y) {
@@ -36,8 +41,6 @@ public class Block {
         rectangle.setColor(Color.BLUE);
         rectangle.fill();
     }
-
-
     public int getPositionX() {
         return x;
     }
@@ -62,8 +65,10 @@ public class Block {
         this.y = y;
     }
 
-    public void setActive() {
-        this.active = true;
+
+    public void setActive(boolean set) {
+        this.active = set;
+
     }
 
     public boolean isActive(){
@@ -76,7 +81,15 @@ public class Block {
     }
 
     public Rectangle getRectangle() {
-        return rectangle;
+        return this.rectangle;
+    }
+
+
+    public Picture getPicture() {
+        return this.picture;
+    }
+    public boolean isHit() {
+        return this.isHit;
     }
 
     public void draw() {

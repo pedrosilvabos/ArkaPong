@@ -1,8 +1,6 @@
 package org.academiadecodigo.tropadelete.charlie;
 
-import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
-import org.academiadecodigo.simplegraphics.graphics.Text;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 import org.academiadecodigo.tropadelete.charlie.GameObjects.Ball;
 import org.academiadecodigo.tropadelete.charlie.GameObjects.Block;
@@ -19,26 +17,34 @@ public class Stage {
     private final int BLOCK_HEIGTH = (STAGE_HEIGHT / 8) - 1;
 
     private final int PADDLE_WALL_OFFSET = 30;
-    private final int PLAYER1_OFFSET = PADDING + PADDLE_WALL_OFFSET;
-    private final int PLAYER2_OFFSET = STAGE_WIDTH - PADDLE_WALL_OFFSET;
+    private final int PLAYER1_OFFSET = PADDING     + PADDLE_WALL_OFFSET;
+    private final int PLAYER2_OFFSET = STAGE_WIDTH - PADDLE_WALL_OFFSET - 25;
     private final Rectangle CANVAS = new Rectangle(PADDING, PADDING, STAGE_WIDTH, STAGE_HEIGHT);
+
+    private       int ballSpeed      = 10; // initial ball speed
+    private final int touchIncrement =  5; // # of touches in the paddle before increment of ball speed (0 = no increment)
+    private final int increment      =  1; // increment to the ball speed
 
     private final String RESOURCES ="resources/themes/";
 
     private Block[] blocks;
-    private Player player1;
-    private Player player2;
-    private static Ball ball;
+
+    private Player  player1;
+    private Player  player2;
+    private static  Ball ball;
+
 
     private String backgroundSkin;
     private String paddleLeftSkin;
     private String paddleRightSkin;
     private String ballSkin;
     private String blockSkin;
+    private int    touchCount;
 
     private PlayerNumber roundWinner;
     private PlayerNumber winner;
     private ScreenWriter screenWriter;
+
 
 
     /**
@@ -62,6 +68,8 @@ public class Stage {
         Picture background = new Picture(PADDING, PADDING, this.backgroundSkin);
         background.draw();
 
+        this.touchCount = 0;
+
     }
 
     /**
@@ -72,8 +80,8 @@ public class Stage {
     public void init() {
 
         CANVAS.draw();
-        player1 = new Player(PLAYER1_OFFSET, PADDING+((STAGE_HEIGHT-150)/2), STAGE_HEIGHT, PlayerNumber.ONE,paddleLeftSkin); //LEFT
-        player2 = new Player(PLAYER2_OFFSET, PADDING+((STAGE_HEIGHT-150)/2), STAGE_HEIGHT, PlayerNumber.TWO,paddleRightSkin); //RIGHT
+        player1 = new Player(PLAYER1_OFFSET, PADDING, STAGE_HEIGHT, PlayerNumber.ONE,paddleLeftSkin); //LEFT
+        player2 = new Player(PLAYER2_OFFSET, PADDING, STAGE_HEIGHT, PlayerNumber.TWO,paddleRightSkin); //RIGHT
         new KeyboardListener(player1, player2);
         makeBlocks(15, 8);
 
@@ -102,8 +110,9 @@ public class Stage {
     public void makeBlocks(int blockCols, int blockRows) {
 
         blocks = blockMatrix(BLOCK_WIDTH, BLOCK_HEIGTH, blockCols, blockRows, PADDING, STAGE_WIDTH);
-        chooseBlock(60);
+        chooseBlock(20);
         showBlocks();
+        hideBlocks();
     }
 
     /**
@@ -121,6 +130,7 @@ public class Stage {
 
                 // show Player Winner on top of screen
                 screenWriter.showWinner();
+
 
                 continue;
             }
@@ -171,8 +181,20 @@ public class Stage {
                     }
                 }
 
-                CollisionDetector.ballCollidesWithPlayer(ball, player1);
-                CollisionDetector.ballCollidesWithPlayer(ball, player2);
+                touchCount = CollisionDetector.ballCollidesWithPlayer(ball, player1,touchCount);
+                touchCount = CollisionDetector.ballCollidesWithPlayer(ball, player2,touchCount);
+
+                if (touchCount >= touchIncrement) {
+                    touchCount = 0;
+                    ballSpeed+=increment;
+                    //ball.setSpeed(ballSpeed);
+                }
+
+
+                // check ball collision with goals
+                roundWinner = Utils.checkVictoryCondition(ball, CANVAS, player1, player2);
+
+                /** BLOCKS */
 
                 // check ball collision with goals
                 roundWinner = Utils.checkVictoryCondition(ball, CANVAS, player1, player2);
@@ -241,8 +263,8 @@ public class Stage {
             for (int row = 0; row < blockRows; row++) {
                 int y = padding + (row * blockHeigth);
 
-                blocks[i] = new Block(x, y, blockWidth, blockHeigth,
-                        new Picture(x, y, this.blockSkin));
+
+                blocks[i] = new Block(x, y, blockWidth, blockHeigth, new Picture(x, y, this.blockSkin));
 
                 i++;
             }
@@ -264,7 +286,7 @@ public class Stage {
             int r = (int) Math.floor(Math.random() * blocks.length);
 
             if (!blocks[r].isActive()) {
-                blocks[r].setActive();
+                blocks[r].setActive(true);
                 i++;
             }
         }
@@ -279,8 +301,16 @@ public class Stage {
 
         for (int i = 0; i < blocks.length; i++) {
             if (blocks[i].isActive()) {
-                Picture picture = new Picture(blocks[i].getPositionX(), blocks[i].getPositionY(), this.blockSkin);
-                picture.draw();
+                blocks[i].getPicture().draw();
+            }
+        }
+    }
+
+    public void hideBlocks() {
+
+        for (int i = 0; i < blocks.length; i++) {
+            if (blocks[i].isActive()) {
+                blocks[i].getPicture().delete();
             }
         }
     }
