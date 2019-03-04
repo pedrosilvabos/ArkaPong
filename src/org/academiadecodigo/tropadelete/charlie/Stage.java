@@ -43,16 +43,21 @@ public class Stage {
     private PlayerNumber winner;
     private ScreenWriter screenWriter;
 
-
+    private Sound sound;
     /**
      * Create and skin the stage
      * <p>
      * Randomly choose a combination of skins for the background, paddle ball and blocks
      */
     public Stage() {
+
         int theme  = (int) (Math.random() * 3);
         int option = (int) (Math.random() * 3);
+        System.out.println(theme);
+        this.sound = new Sound(RESOURCES+theme+"/sounds/music.wav");
+        sound.setLoop(1);
 
+       sound.play(true);
         // só para testes
         if (theme == 2) {option = 0;}
 

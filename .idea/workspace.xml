@@ -1,111 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb49dacf-aae6-40fa-9405-6c5feb6b2b84" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/themes/0/images copy/background0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/0/images copy/background1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/0/images copy/background2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/0/images copy/ball0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/0/images copy/ball1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/0/images copy/ball2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/0/images copy/block0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/0/images copy/block1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/0/images copy/block2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/0/images copy/paddleLeft0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/0/images copy/paddleLeft1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/0/images copy/paddleLeft2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/0/images copy/paddleRight0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/0/images copy/paddleRight1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/0/images copy/paddleRight2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/0/sounds/blockHide.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/0/sounds/blockShow.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/0/sounds/music.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/0/sounds/paddleHit.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/0/sounds/victory.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/1/images copy/background0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/1/images copy/background1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/1/images copy/background2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/1/images copy/ball0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/1/images copy/ball1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/1/images copy/ball2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/1/images copy/block0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/1/images copy/block1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/1/images copy/block2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/1/images copy/paddleLeft0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/1/images copy/paddleLeft1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/1/images copy/paddleLeft2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/1/images copy/paddleRight0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/1/images copy/paddleRight1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/1/images copy/paddleRight2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/1/images/ball0.png~38a7d10a11939308a2b6a01669b6abfa90085082" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/1/images/ball0.png~HEAD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/1/images/block0.png~38a7d10a11939308a2b6a01669b6abfa90085082" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/1/images/block0.png~HEAD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/1/sounds/blockHide.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/1/sounds/blockShow.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/1/sounds/music.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/1/sounds/paddleHit.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/1/sounds/victory.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/2/images copy/background0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/2/images copy/background1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/2/images copy/background2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/2/images copy/ball0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/2/images copy/block0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/2/images copy/paddleLeft0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/2/images copy/paddleRight0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/2/images/ball1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/2/images/ball2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/2/images/block1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/2/images/block2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/2/images/paddleLeft1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/2/images/paddleLeft2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/2/images/paddleRight1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/2/images/paddleRight2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/2/sounds/Z_fire_.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/2/sounds/blockHide.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/2/sounds/blockShow.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/2/sounds/music.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/2/sounds/paddleHit.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/themes/2/sounds/victory.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/ScreenWriter.java" afterDir="false" />
+    <list default="true" id="d4245230-1db2-485d-90fe-78fed90ae6e4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/Sound.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArkaPong.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/0/description.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/0/description.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/0/images/background0.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/0/images/background0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/0/images/block0.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/0/images/block0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/0/images/paddleLeft0.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/0/images/paddleLeft0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/0/images/paddleRight0.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/0/images/paddleRight0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/1/description.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/1/description.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/1/images/background0.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/1/images/background0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/1/images/background1.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/1/images/background1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/1/images/background2.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/1/images/background2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/1/images/ball1.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/1/images/ball1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/1/images/ball2.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/1/images/ball2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/1/images/block1.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/1/images/block1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/1/images/block2.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/1/images/block2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/1/images/paddleLeft0.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/1/images/paddleLeft0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/1/images/paddleLeft1.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/1/images/paddleLeft1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/1/images/paddleLeft2.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/1/images/paddleLeft2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/1/images/paddleRight0.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/1/images/paddleRight0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/1/images/paddleRight1.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/1/images/paddleRight1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/1/images/paddleRight2.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/1/images/paddleRight2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/2/description.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/2/description.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/2/images/background0.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/2/images/background0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/2/images/background1.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/2/images/background1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/2/images/background2.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/2/images/background2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/2/images/ball0.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/2/images/ball0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/2/images/block0.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/2/images/block0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/2/images/paddleLeft0.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/2/images/paddleLeft0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/2/images/paddleRight0.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/2/images/paddleRight0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/CollisionDetector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/CollisionDetector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/GameObjects/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/GameObjects/Ball.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/GameObjects/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/GameObjects/Block.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/GameObjects/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/GameObjects/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/KeyboardListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/KeyboardListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/PlayerNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/PlayerNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/CollisionDetector.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/CollisionDetector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/GameObjects/Ball$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/GameObjects/Ball$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/GameObjects/Ball.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/GameObjects/Ball.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/GameObjects/Block.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/GameObjects/Block.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/GameObjects/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/GameObjects/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/KeyboardListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/KeyboardListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/PlayerNumber.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/PlayerNumber.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/Stage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/Stage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/arkaPong/org/academiadecodigo/tropadelete/charlie/Utils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/master/org/academiadecodigo/tropadelete/charlie/CollisionDetector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/master/org/academiadecodigo/tropadelete/charlie/Drawable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/master/org/academiadecodigo/tropadelete/charlie/GameObjects/Ball$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/master/org/academiadecodigo/tropadelete/charlie/GameObjects/Ball.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/master/org/academiadecodigo/tropadelete/charlie/GameObjects/Block.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/master/org/academiadecodigo/tropadelete/charlie/GameObjects/Direction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/master/org/academiadecodigo/tropadelete/charlie/GameObjects/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/master/org/academiadecodigo/tropadelete/charlie/KeyboardListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/master/org/academiadecodigo/tropadelete/charlie/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/master/org/academiadecodigo/tropadelete/charlie/PlayerDirection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/master/org/academiadecodigo/tropadelete/charlie/PlayerNumber.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/master/org/academiadecodigo/tropadelete/charlie/ScreenWriter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/master/org/academiadecodigo/tropadelete/charlie/Stage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/master/org/academiadecodigo/tropadelete/charlie/Utils.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/Stage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/Stage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/Utils.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -116,11 +39,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+            <state relative-caret-position="44">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/Stage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="58" selection-start-line="58" selection-end-line="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/Sound.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="181">
+              <caret line="39" selection-start-line="39" selection-end-line="39" />
+              <folding>
+                <element signature="e#844#845#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -130,50 +74,80 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/Stage.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1920" />
+    <option name="height" value="973" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="master" type="462c0819:PsiDirectoryNode" />
+              <item name="ArkaPong" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ArkaPong" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="master" type="462c0819:PsiDirectoryNode" />
+              <item name="ArkaPong" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ArkaPong" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="master" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="master" type="462c0819:PsiDirectoryNode" />
+              <item name="ArkaPong" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ArkaPong" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="0" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="master" type="462c0819:PsiDirectoryNode" />
+              <item name="ArkaPong" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ArkaPong" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ArkaPong" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ArkaPong" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="1" type="462c0819:PsiDirectoryNode" />
+              <item name="sounds" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ArkaPong" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ArkaPong" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ArkaPong" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ArkaPong" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="2" type="462c0819:PsiDirectoryNode" />
+              <item name="sounds" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ArkaPong" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ArkaPong" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="master" type="462c0819:PsiDirectoryNode" />
+              <item name="ArkaPong" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ArkaPong" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="charlie" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -181,12 +155,16 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551662103743" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551713319262" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -203,7 +181,7 @@
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.academiadecodigo.tropadelete.charlie.Main" />
-      <module name="master" />
+      <module name="ArkaPong" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.academiadecodigo.tropadelete.charlie.*" />
@@ -225,16 +203,20 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="bb49dacf-aae6-40fa-9405-6c5feb6b2b84" name="Default Changelist" comment="" />
-      <created>1551661644343</created>
+      <changelist id="d4245230-1db2-485d-90fe-78fed90ae6e4" name="Default Changelist" comment="" />
+      <created>1551713030475</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1551661644343</updated>
+      <updated>1551713030475</updated>
+      <workItem from="1551713033912" duration="243000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="243000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="0" y="23" width="1920" height="973" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
@@ -242,15 +224,17 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973376" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3289689" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3291714" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -260,16 +244,37 @@
       <window_info anchor="right" id="Maven" />
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/Sound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="e#844#845#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        <state relative-caret-position="44">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/tropadelete/charlie/Stage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
         </state>
       </provider>
     </entry>
