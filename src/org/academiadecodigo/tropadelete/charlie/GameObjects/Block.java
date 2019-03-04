@@ -23,9 +23,7 @@ public class Block {
         this.width  = width;
         this.heigth = heigth;
         this.active = false;
-        rectangle = new Rectangle();
-        rectangle.setColor(Color.BLUE);
-        rectangle.fill();
+        rectangle = new Rectangle(x,y,width,heigth);
         this.picture = picture;
 
     }
@@ -37,29 +35,6 @@ public class Block {
         rectangle.setColor(Color.BLUE);
         rectangle.fill();
     }
-    public int getPositionX() {
-        return x;
-    }
-
-    public int getPositionY() {
-        return y;
-    }
-
-    public int getWidth() {
-        return this.width;
-    }
-
-    public int getHeigth() {
-        return this.heigth;
-    }
-
-    public void setPositionX(int x) {
-        this.x = x;
-    }
-
-    public void setPositionY(int y) {
-        this.y = y;
-    }
 
     public void setActive(boolean set) {
         this.active = set;
@@ -68,10 +43,6 @@ public class Block {
         return active;
     }
 
-    public void respawn() {
-        this.active = true;
-        rectangle.fill();
-    }
 
     public Rectangle getRectangle() {
         return this.rectangle;
@@ -80,11 +51,14 @@ public class Block {
     public Picture getPicture() {
         return this.picture;
     }
-    public boolean isHit() {
-        return this.isHit;
-    }
 
-    public void draw() {
-        rectangle.fill();
+    /**
+     * Deactivate a block
+     * Hides a block and sets it to false
+     */
+    public void hideBlock() {
+
+        this.getPicture().delete();
+        this.setActive(false);
     }
 }

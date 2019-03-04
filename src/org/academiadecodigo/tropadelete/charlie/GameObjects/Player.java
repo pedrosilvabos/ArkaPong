@@ -22,7 +22,7 @@ public class Player implements Drawable {
     private int paddleHeight;
     private int playerOffset;
 
-    private final int INITIAL_POINTS = 3;
+    private final int INITIAL_POINTS = 5;
     private int points;
 
     public Player(int offset, int posY, int stageHeight, PlayerNumber pn, String picture) {
@@ -105,10 +105,6 @@ public class Player implements Drawable {
 
     public int getPoints() {
         return points;
-    }
-
-    public boolean isLoser() {
-        return points == 0;
     }
 
     public void setMoving(boolean moving) {

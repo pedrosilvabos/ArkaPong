@@ -21,9 +21,12 @@ public class Stage {
     private final int PLAYER2_OFFSET = STAGE_WIDTH - PADDLE_WALL_OFFSET - 25;
     private final Rectangle CANVAS = new Rectangle(PADDING, PADDING, STAGE_WIDTH, STAGE_HEIGHT);
 
-    private       int ballSpeed      = 10; // initial ball speed
-    private final int touchIncrement =  5; // # of touches in the paddle before increment of ball speed (0 = no increment)
-    private final int increment      =  1; // increment to the ball speed
+    private final int touchIncrement =  5;
+    private final int blockIncrement =  1;
+    private final int initialSleep   = 25;
+    private       int sleep          = initialSleep;
+    private       int sleepDecrement = -2;
+    private       int numBlocks      =  5;
 
     private final String RESOURCES ="resources/themes/";
 
@@ -43,7 +46,14 @@ public class Stage {
     private PlayerNumber winner;
     private ScreenWriter screenWriter;
 
-    private Sound sound;
+    private Sound music;
+    private Sound blockHide;
+    private Sound blockShow;
+    private Sound paddleHit;
+    private Sound victory;
+
+
+
     /**
      * Create and skin the stage
      * <p>
@@ -52,13 +62,17 @@ public class Stage {
     public Stage() {
 
         int theme  = (int) (Math.random() * 3);
-        int option = (int) (Math.random() * 3);
-        System.out.println(theme);
-        //this.sound = new Sound(RESOURCES+theme+"/sounds/music.wav");
-//        sound.setLoop(1);
+        int option = 0; //(int) (Math.random() * 3);
+        this.music      = new Sound(RESOURCES+theme+"/sounds/music.wav");
+        this.blockHide  = new Sound(RESOURCES+theme+"/sounds/blockHide.wav");
+        this.blockShow  = new Sound(RESOURCES+theme+"/sounds/blockShow.wav");
+        this.paddleHit  = new Sound(RESOURCES+theme+"/sounds/paddleHit.wav");
+        this.victory    = new Sound(RESOURCES+theme+"/sounds/victory.wav");
 
-       //sound.play(true);
-        // só para testes
+
+        music.setLoop(1);
+        music.play(true);
+
         if (theme == 2) {option = 0;}
 
         this.backgroundSkin  = RESOURCES+theme+"/images/background" +option+".png";
@@ -84,14 +98,8 @@ public class Stage {
         player2 = new Player(PLAYER2_OFFSET, PADDING, STAGE_HEIGHT, PlayerNumber.TWO,paddleRightSkin); //RIGHT
         new KeyboardListener(player1, player2);
         makeBlocks(15, 8);
-
-        /*
-        // For testing purposes!
-        for (int i = 0 ; i < blocks.length ; i++) {
-            blocks[i] = new Block(((1280 / 2) - 300) + (i * 30), (768 / 2) + 20);
-        }
-        */
-
+        chooseBlock(10);
+        showBlocks();
         roundWinner = PlayerNumber.NONE;
         winner = PlayerNumber.NONE;
         screenWriter = new ScreenWriter(player1, player2, CANVAS);
@@ -110,9 +118,7 @@ public class Stage {
     public void makeBlocks(int blockCols, int blockRows) {
 
         blocks = blockMatrix(BLOCK_WIDTH, BLOCK_HEIGTH, blockCols, blockRows, PADDING, STAGE_WIDTH);
-        chooseBlock(20);
-        showBlocks();
-        hideBlocks();
+
     }
 
     /**
@@ -136,7 +142,7 @@ public class Stage {
 
 
             try {
-                Thread.sleep(20);
+                Thread.sleep(sleep);
 
                 /** PLAYERS */
 
@@ -154,6 +160,7 @@ public class Stage {
 
                 if (ball == null) {
                     ball = Utils.startBall(player1, player2);
+                    sleep = initialSleep;
                 }
 
                 if (ball != null) {
@@ -178,35 +185,35 @@ public class Stage {
                     boolean collision = false;
 
                     if (blocks[i].isActive()) {
+
                         collision = CollisionDetector.ballCollidesWithBlocks(ball, blocks[i]);
+
                     }
 
                     if (collision) {
+                        //destroy the block
+                        blockHide.play(true);
                         break;
                     }
                 }
 
-                touchCount = CollisionDetector.ballCollidesWithPlayer(ball, player1,touchCount);
-                touchCount = CollisionDetector.ballCollidesWithPlayer(ball, player2,touchCount);
+                touchCount = CollisionDetector.ballCollidesWithPlayer(ball, player1,touchCount,paddleHit);
+                touchCount = CollisionDetector.ballCollidesWithPlayer(ball, player2,touchCount,paddleHit);
+
 
                 if (touchCount >= touchIncrement) {
                     touchCount = 0;
-                    ballSpeed+=increment;
-                    //ball.setSpeed(ballSpeed);
+                    this.numBlocks+=blockIncrement;
+                    chooseBlock(numBlocks);
+                    showBlocks();
+                    sleep += sleepDecrement;
+                    if (sleep < 1) {sleep = 1;}
                 }
 
 
                 // check ball collision with goals
                 roundWinner = Utils.checkVictoryCondition(ball, CANVAS, player1, player2);
 
-                /** BLOCKS */
-
-                for (Block block : blocks) {
-
-                    if (block.isActive()) {
-                        block.draw();
-                    }
-                }
 
                 /** CHECKING WINNER */
 
@@ -214,6 +221,7 @@ public class Stage {
                     if (player2.getPoints() == 0) {
                         winner = roundWinner;
                         screenWriter.setWinner(winner);
+                        victory.play(true);
                     }
 
                     screenWriter.updatePlayerScores();
@@ -225,6 +233,7 @@ public class Stage {
                     if (player1.getPoints() == 0) {
                         winner = roundWinner;
                         screenWriter.setWinner(winner);
+                        victory.play(true);
                     }
 
                     screenWriter.updatePlayerScores();
@@ -280,6 +289,7 @@ public class Stage {
      * @param numBlock the number of active blocks at that time
      */
     public void chooseBlock(int numBlock) {
+        hideBlocks();
         int i = 0;
 
         while (i < numBlock) {
@@ -301,6 +311,7 @@ public class Stage {
 
         for (int i = 0; i < blocks.length; i++) {
             if (blocks[i].isActive()) {
+                blockShow.play(true);
                 blocks[i].getPicture().draw();
             }
         }

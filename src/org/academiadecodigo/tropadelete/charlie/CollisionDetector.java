@@ -11,6 +11,7 @@ import org.academiadecodigo.tropadelete.charlie.PlayerNumber;
 
 public class CollisionDetector {
 
+
     /**
      * Checks if this Ball collides with this Player
      *
@@ -18,7 +19,8 @@ public class CollisionDetector {
      * @param player the Player, to be able to reference its measurements
      * @return true if there is a collision between the two; false otherwise
      */
-    public static int ballCollidesWithPlayer(Ball ball, Player player,int touchCount) {
+    public static int ballCollidesWithPlayer(Ball ball, Player player,int touchCount, Sound paddleHit) {
+
 
         Ellipse eBall = ball.getEllipse();
         Rectangle rPlayer = player.getRectangle();
@@ -26,20 +28,35 @@ public class CollisionDetector {
         if (player.getPlayerNumber() == PlayerNumber.ONE) {
 
             if (p1CheckX(eBall, rPlayer) && checkY(eBall, rPlayer)) {
-                System.out.println("BallY: " + eBall.getY() + " PadY: " + rPlayer.getY());
-                ball.setDeltaByBouncePlayer();
-                touchCount++;
-            }
+                if (!ball.isColliding()) {
 
+                    //hit paddle from player 1
+                    paddleHit.play(true);
+                    ball.setDeltaByBouncePlayer();
+                    ball.setColliding(true);
+                    return ++touchCount;
+                }
+
+                return touchCount;
+            }
+            ball.setColliding(false);
         }
 
         if (player.getPlayerNumber() == PlayerNumber.TWO) {
 
             if (p2CheckX(eBall, rPlayer) && checkY(eBall, rPlayer)) {
-                System.out.println("BallY: " + eBall.getY() + " PadY: " + rPlayer.getY());
-                ball.setDeltaByBouncePlayer();
-                touchCount++;
+                if (!ball.isColliding()) {
+
+                    //hit paddle from player 2
+                    paddleHit.play(true);
+                    ball.setDeltaByBouncePlayer();
+                    ball.setColliding(true);
+                    return ++touchCount;
+                }
+
+                return touchCount;
             }
+            ball.setColliding(false);
         }
         return touchCount;
     }
@@ -85,16 +102,19 @@ public class CollisionDetector {
             /** Check upperRight point of Ball */
             if (pointWithinBlock(block.getRectangle(), ballS.getX() + ballS.getWidth(), ballS.getY())) {
                 ball.setDeltaByBounce(Direction.DOWN);
+                block.hideBlock();
                 return true;
             }
 
             /** Check lowerLeft point of Ball */
             if (pointWithinBlock(block.getRectangle(), ballS.getX(), ballS.getY() + ballS.getHeight())) {
                 ball.setDeltaByBounce(Direction.RIGHT);
+                block.hideBlock();
                 return true;
             }
 
             ball.setDeltaByBounce(Direction.LOWER_RIGHT);
+            block.hideBlock();
             return true;
         }
 
@@ -104,10 +124,12 @@ public class CollisionDetector {
             /** Check lowerRight point of Ball */
             if (pointWithinBlock(block.getRectangle(), ballS.getX() + ballS.getWidth(), ballS.getY() + ballS.getHeight())) {
                 ball.setDeltaByBounce(Direction.LEFT);
+                block.hideBlock();
                 return true;
             }
 
             ball.setDeltaByBounce(Direction.LOWER_LEFT);
+            block.hideBlock();
             return true;
         }
 
@@ -117,16 +139,19 @@ public class CollisionDetector {
             /** Check lowerRight point of Ball */
             if (pointWithinBlock(block.getRectangle(), ballS.getX() + ballS.getWidth(), ballS.getY() + ballS.getHeight())) {
                 ball.setDeltaByBounce(Direction.UP);
+                block.hideBlock();
                 return true;
             }
 
             ball.setDeltaByBounce(Direction.UPPER_RIGHT);
+            block.hideBlock();
             return true;
         }
 
         /** Check lowerRight point of Ball */
         if (pointWithinBlock(block.getRectangle(), ballS.getX() + ballS.getWidth(), ballS.getY() + ballS.getHeight())) {
             ball.setDeltaByBounce(Direction.UPPER_LEFT);
+            block.hideBlock();
             return true;
         }
 
@@ -142,7 +167,7 @@ public class CollisionDetector {
     public static PlayerNumber ballCollisionGoal(Ellipse ball, Rectangle stage) {
 
         PlayerNumber pn = PlayerNumber.NONE;
-        int spacing = 10;
+        int spacing = 20;
 
         if (ball.getX() <= stage.getX() + spacing) {
             pn = PlayerNumber.ONE;

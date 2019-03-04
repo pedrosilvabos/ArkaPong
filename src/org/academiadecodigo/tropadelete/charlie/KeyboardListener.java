@@ -15,14 +15,14 @@ public class KeyboardListener implements KeyboardHandler {
     private Player player1;
     private Player player2;
 
-    public KeyboardListener(Player player1, Player player2) { //mask cast to movable
+    public KeyboardListener(Player player1, Player player2) {
 
         this.player1 = player1;
         this.player2 = player2;
 
         int[] movements = {
-                KeyboardEvent.KEY_UP,
-                KeyboardEvent.KEY_DOWN,
+                KeyboardEvent.KEY_K,
+                KeyboardEvent.KEY_M,
                 KeyboardEvent.KEY_A,
                 KeyboardEvent.KEY_Z
         };
@@ -60,12 +60,12 @@ public class KeyboardListener implements KeyboardHandler {
         }
 
         switch (key.getKey()) {
-            case KeyboardEvent.KEY_UP:
+            case KeyboardEvent.KEY_K:
                 player2.setPlayerDirection(PlayerDirection.UP);
                 player2.setMoving(true);
                 break;
 
-            case KeyboardEvent.KEY_DOWN:
+            case KeyboardEvent.KEY_M:
                 player2.setPlayerDirection(PlayerDirection.DOWN);
                 player2.setMoving(true);
                 break;
@@ -86,7 +86,7 @@ public class KeyboardListener implements KeyboardHandler {
     public void keyReleased(KeyboardEvent key) {
         int tecla = key.getKey();
 
-        if (tecla == KeyboardEvent.KEY_UP || tecla == KeyboardEvent.KEY_DOWN) {
+        if (tecla == KeyboardEvent.KEY_K || tecla == KeyboardEvent.KEY_M) {
             player2.setMoving(false);
         }
 
@@ -105,7 +105,7 @@ public class KeyboardListener implements KeyboardHandler {
 
     private static void checkPlayerTwo(Ball ball, KeyboardEvent key) {
 
-        if (key.getKey() == KeyboardEvent.KEY_UP || key.getKey() == KeyboardEvent.KEY_DOWN) {
+        if (key.getKey() == KeyboardEvent.KEY_K || key.getKey() == KeyboardEvent.KEY_M) {
             ball.removeStatic();
         }
     }
