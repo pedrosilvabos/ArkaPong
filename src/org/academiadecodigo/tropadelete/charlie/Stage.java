@@ -63,11 +63,11 @@ public class Stage {
 
         int theme  = (int) (Math.random() * 3);
         int option = 0; //(int) (Math.random() * 3);
-        this.music      = new Sound(RESOURCES+theme+"/sounds/music.wav");
-        this.blockHide  = new Sound(RESOURCES+theme+"/sounds/blockHide.wav");
-        this.blockShow  = new Sound(RESOURCES+theme+"/sounds/blockShow.wav");
-        this.paddleHit  = new Sound(RESOURCES+theme+"/sounds/paddleHit.wav");
-        this.victory    = new Sound(RESOURCES+theme+"/sounds/victory.wav");
+        this.music      = new Sound("/resources/themes/"+theme+"/sounds/music.wav");
+        this.blockHide  = new Sound("/resources/themes/"+theme+"/sounds/blockHide.wav");
+        this.blockShow  = new Sound("/resources/themes/"+theme+"/sounds/blockShow.wav");
+        this.paddleHit  = new Sound("/resources/themes/"+theme+"/sounds/paddleHit.wav");
+        this.victory    = new Sound("/resources/themes/"+theme+"/sounds/victory.wav");
 
 
         music.setLoop(1);
@@ -159,7 +159,7 @@ public class Stage {
                 /** BALL */
 
                 if (ball == null) {
-                    ball = Utils.startBall(player1, player2);
+                    ball = Utils.startBall(player1, player2,this.ballSkin);
                     sleep = initialSleep;
                 }
 

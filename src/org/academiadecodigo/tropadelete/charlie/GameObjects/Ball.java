@@ -2,6 +2,7 @@ package org.academiadecodigo.tropadelete.charlie.GameObjects;
 
 import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Ellipse;
+import org.academiadecodigo.simplegraphics.pictures.Picture;
 import org.academiadecodigo.tropadelete.charlie.Drawable;
 import org.academiadecodigo.tropadelete.charlie.PlayerNumber;
 
@@ -19,15 +20,19 @@ public class Ball implements Drawable {
     private boolean colliding;
     private boolean isStatic;
     private PlayerNumber startingPlayer;
+    private Picture ballSkin;
 
     //initialize the ball with a motion
     //ball starts at the center of the screen
-    public Ball(int x, int y, PlayerNumber playerNumber) {
+    public Ball(int x, int y, PlayerNumber playerNumber,String ballSkin) {
+
         this.x = x;
         this.y = y;
 
-        ellipse = new Ellipse(x, y, 20, 20);
-        ellipse.setColor(Color.PINK);
+        this.ballSkin = new Picture(x,y,ballSkin);
+
+        ellipse = new Ellipse(x, y, 40, 40);
+
         isStatic = true;
         startingPlayer = playerNumber;
 
@@ -41,6 +46,7 @@ public class Ball implements Drawable {
     public void move() {
         x += dx;
         y += dy;
+        ballSkin.translate(dx,dy);
         ellipse.translate(dx, dy);
     }
 
@@ -50,10 +56,10 @@ public class Ball implements Drawable {
      * @see Ellipse#draw()
      */
     public void draw() {
-        ellipse.fill();
+        ballSkin.draw();
     }
 
-    public void delete() {ellipse.delete();}
+    public void delete() {ellipse.delete(); ballSkin.delete();}
 
     /**
      * Returns the Ellipse shape of this Ball.

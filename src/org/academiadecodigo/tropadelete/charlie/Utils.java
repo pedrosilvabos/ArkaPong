@@ -9,7 +9,7 @@ import java.util.Random;
 public class Utils {
 
 
-    public static Ball startBall(Player player1, Player player2) {
+    public static Ball startBall(Player player1, Player player2, String ballSkin) {
 
         int ballPaddleDistance = 50;
         boolean isFacingPlayerTwo = new Random().nextBoolean();
@@ -26,9 +26,9 @@ public class Utils {
         if (isFacingPlayerTwo) {
 
             int startX = rPlayer2.getX() - ballPaddleDistance - Ball.getBound();
-            startAngle = startAngleUp ? 180 + 30 : 180 - 30;
+            startAngle = startAngleUp ? 180 + 30  : 180 - 30;
 
-            ball = new Ball(startX, startY, PlayerNumber.TWO);
+            ball = new Ball(startX, startY, PlayerNumber.TWO,ballSkin);
         }
 
         else {
@@ -36,7 +36,7 @@ public class Utils {
             int startX = rPlayer1.getX() + rPlayer1.getWidth() + ballPaddleDistance;
             startAngle = startAngleUp ? 30 : -30;
 
-            ball = new Ball(startX, startY, PlayerNumber.ONE);
+            ball = new Ball(startX, startY, PlayerNumber.ONE,ballSkin);
         }
 
         ball.setDeltaByAngle(startAngle);

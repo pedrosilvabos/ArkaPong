@@ -60,7 +60,7 @@ public class Sound {
         AudioInputStream inputStream = null;
 
         try {
-
+            path = path.substring(1);
             if (soundURL == null) {
 
                 File file = new File(path);
