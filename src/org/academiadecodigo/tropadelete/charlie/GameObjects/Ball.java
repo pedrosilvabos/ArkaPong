@@ -1,6 +1,5 @@
 package org.academiadecodigo.tropadelete.charlie.GameObjects;
 
-import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Ellipse;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 import org.academiadecodigo.tropadelete.charlie.Drawable;
@@ -216,31 +215,31 @@ public class Ball implements Drawable {
             direction = Direction.UP;
         }
 
-        if (dx > 0 && dy < 0) {
+        else if (dx > 0 && dy < 0) {
             direction = Direction.UPPER_RIGHT;
         }
 
-        if (dx > 0 && dy == 0) {
+        else if (dx > 0 && dy == 0) {
             direction = Direction.RIGHT;
         }
 
-        if (dx > 0 && dy > 0) {
+        else if (dx > 0 && dy > 0) {
             direction = Direction.LOWER_RIGHT;
         }
 
-        if (dx == 0 && dy > 0) {
+        else if (dx == 0 && dy > 0) {
             direction = Direction.DOWN;
         }
 
-        if (dx < 0 && dy > 0) {
+        else if (dx < 0 && dy > 0) {
             direction = Direction.LOWER_LEFT;
         }
 
-        if (dx < 0 && dy == 0) {
+        else if (dx < 0 && dy == 0) {
             direction = Direction.LEFT;
         }
 
-        if (dx < 0 && dy < 0) {
+        else {
             direction = Direction.UPPER_LEFT;
         }
     }

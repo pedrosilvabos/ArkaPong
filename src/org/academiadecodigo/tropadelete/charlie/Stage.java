@@ -14,7 +14,7 @@ public class Stage {
     private final int STAGE_WIDTH = 1680;
 
     private final int BLOCK_WIDTH = 40;
-    private final int BLOCK_HEIGTH = (STAGE_HEIGHT / 8) - 1;
+    private final int BLOCK_HEIGHT = (STAGE_HEIGHT / 8) - 1;
 
     private final int PADDLE_WALL_OFFSET = 30;
     private final int PLAYER1_OFFSET = PADDING     + PADDLE_WALL_OFFSET;
@@ -51,8 +51,6 @@ public class Stage {
     private Sound blockShow;
     private Sound paddleHit;
     private Sound victory;
-
-
 
     /**
      * Create and skin the stage
@@ -117,7 +115,7 @@ public class Stage {
      */
     public void makeBlocks(int blockCols, int blockRows) {
 
-        blocks = blockMatrix(BLOCK_WIDTH, BLOCK_HEIGTH, blockCols, blockRows, PADDING, STAGE_WIDTH);
+        blocks = blockMatrix(BLOCK_WIDTH, BLOCK_HEIGHT, blockCols, blockRows, PADDING, STAGE_WIDTH);
 
     }
 
@@ -203,7 +201,7 @@ public class Stage {
 
                 if (touchCount >= touchIncrement) {
                     touchCount = 0;
-                    this.numBlocks+=blockIncrement;
+                    this.numBlocks += blockIncrement;
                     chooseBlock(numBlocks);
                     showBlocks();
                     sleep += sleepDecrement;

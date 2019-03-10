@@ -5,10 +5,7 @@ import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
 import org.academiadecodigo.tropadelete.charlie.GameObjects.Ball;
-import org.academiadecodigo.tropadelete.charlie.GameObjects.Direction;
 import org.academiadecodigo.tropadelete.charlie.GameObjects.Player;
-
-import java.security.Key;
 
 public class KeyboardListener implements KeyboardHandler {
 
@@ -94,7 +91,6 @@ public class KeyboardListener implements KeyboardHandler {
             player1.setMoving(false);
         }
     }
-//active game init boolean game start
 
     private static void checkPlayerOne(Ball ball, KeyboardEvent key) {
 
